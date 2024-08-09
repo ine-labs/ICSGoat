@@ -1,0 +1,28 @@
+{ "translations": {
+    "Ransomware detected: Your account is locked (read-only for client access) to protect your data. Click here to unlock." : "تم اكتشاف برامج الفدية الضارة: حسابك مغلق (للقراءة فقط لوصول العميل) لحماية بياناتك. انقر هنا لإلغاء القفل.",
+    "Are you sure, you want to lock write access for your account?" : "هل أنت متأكد من رغبتك في قفل حق الوصول للكتابة لحسابك؟",
+    "Ransomware Protection" : "الحماية من برامج الفدية الضارة",
+    "Are you sure, you want to re-enable write access for your account?" : "هل أنت متأكد من أنك ترغب في إعادة تفعيل حق الوصول للكتابة لحسابك؟",
+    "File was <strong>blocked</strong> by Ransomware Protection app." : "تم <strong>حظر</strong> الملف من تطبيقات الحماية من برامج الفدية الضارة.",
+    "Write access <strong>locked</strong> by Ransomware Protection app." : "تم <strong>حظر</strong> حق الوصول للكتابة من تطبيقات الحماية من برامج الفدية الضارة.",
+    "Write access <strong>unlocked</strong> by Ransomware Protection app." : "تم <strong>إلغاء حظر</strong> حق الوصول للكتابة من تطبيقات الحماية من برامج الفدية الضارة.",
+    "File %2$s was blocked by Ransomware Protection app. Found pattern %1$s" : "تم حظر الملف %2$s من تطبيقات الحماية من برامج الفدية الضارة. تم العثور على نمط %1$s",
+    "Account locked by Ransomware Protection app. Found pattern %1$s for path %2$s" : "تم حظر الحساب من تطبيقات الحماية من برامج الفدية الضارة. تم العثور على نمط %1$s لمسار %2$s",
+    "Account locked by Ransomware Protection app. %1$s" : "تم حظر الحساب من تطبيق الحماية من برامج الفدية الضارة. %1$s",
+    "Account unlocked: %1$s" : "الحساب المُلغى قفله: %1$s",
+    "Found pattern %s for path %s" : "تم العثور على نمط %s لمسار %s",
+    "Unlocked by occ" : "تم إلغاء القفل بواسطة occ",
+    "Unlocked in security settings" : "تم إلغاء القفل في الإعدادات الأمنية",
+    "Locked by Ransomware Protection app. Unlock your account in the security settings panel." : "تم الحظر من تطبيق الحماية من برامج الفدية الضارة. ألغِ قفل الحساب في لوحة الإعدادات الأمنية.",
+    "File blocked by Ransomware Protection app. Found pattern %s" : "تم حظر الملف من تطبيق الحماية من برامج الفدية الضارة. تم العثور على نمط %s",
+    "Triggered manually in Personal Settings" : "تم التشغيل يدويًا في الإعدادات الشخصية",
+    "Lock user accounts (read-only) for sync clients when a blacklist match occurred." : "اقفل حسابات المستخدم (للقراءة فقط) لعملاء المزامنة عند حدوث تطابق في القائمة السوداء.",
+    "Your account was locked by Ransomware Protection app due to intrusion attempts." : "تم حظر حسابك من تطبيق الحماية من برامج الفدية الضارة بسبب محاولات التطفل.",
+    "- Locked on %s (server time), Timestamp: %s" : "- مُقفل في %s (مدة الخادم)، الطابع الزمني: %s",
+    "- Reason: %s" : "- السبب: %s",
+    "Write access will only be re-enabled by clicking the button below." : "لن تتم إعادة تمكين حق الوصول للكتابة إلا عن طريق النقر فوق الزر أدناه فقط.",
+    "Unlock your account" : "إلغاء قفل حسابك",
+    "Sync clients are enabled." : "تم تمكين عملاء المزامنة.",
+    "Lock your account" : "قفل حسابك"
+},"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<info>
+  <id>user_shibboleth</id>
+  <!-- use namespace -->
+  <name>SAML/SSO Integration</name>
+  <summary>Single Sign-on integration for SAML 2.0 compatible Identity Providers</summary>
+  <description>
+    Already have a SAML 2.0 compatible identity provider (IdP) like Shibboleth, PrivacyIDEA, Ping Identity Ping Federate or Microsoft ADFS? Drop ownCloud into your existing infrastructure and authenticate with your chosen IdP increasing security while simultaneously improving user experience.
+
+    - Increase security by using a professional and specialized identity management solution that reduces your attack surface by providing a single authentication and authorization entity instead of multiple proprietary ones for each service and benefit from integrated features like multi-factor authentication or even custom authentication mechanisms.
+    - Improve user experience by integrating ownCloud with your Single Sign-On (SSO) environment: Users just need to provide their credentials once and their session will be used to automatically grant access to all supported services.
+
+    Note: To get set up it is necessary to conduct additional configuration of the Apache web server and the extension itself. Please read the [ownCloud Single Sign-On Documentation](https://doc.owncloud.com/server/latest/admin_manual/enterprise/user_management/user_auth_shibboleth.html) for more information.</description>
+  <category>integration</category>
+  <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/user_shibboleth/owncloud-app-user_shibboleth.jpg</screenshot>
+  <licence>OCL</licence>
+  <author>ownCloud GmbH</author>
+  <version>3.5.0</version>
+  <documentation>
+    <admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/user_management/user_auth_shibboleth.html</admin>
+  </documentation>
+  <dependencies>
+    <owncloud min-version="10.5" max-version="10"/>
+  </dependencies>
+  <types>
+    <authentication/>
+  </types>
+  <remote>
+    <nonshib-webdav>appinfo/remote.php</nonshib-webdav>
+  </remote>
+  <commands>
+    <command>OCA\User_Shibboleth\Command\Mode</command>
+    <command>OCA\User_Shibboleth\Command\Mapping</command>
+  </commands>
+  <settings>
+    <admin>OCA\User_Shibboleth\Panels\Admin</admin>
+  </settings>
+  <use-migrations>true</use-migrations>
+</info>

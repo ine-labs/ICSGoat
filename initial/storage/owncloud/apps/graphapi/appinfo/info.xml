@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<info>
+	<id>graphapi</id>
+	<name>Graph API</name>
+	<summary>MS Graph API user info endpoint</summary>
+	<description>
+This extension adds a user info endpoint to ownCloud Server which is based on the Microsoft Graph API specification. 
+
+The user info endpoint enhances ownCloud Server 10 with capabilities for a **Bridge setup** which is a hybrid deployment between ownCloud Server 10 and ownCloud Infinite Scale.
+It enables ownCloud Infinite Scale components like the built-in Identity Provider (Kopano Konnect) for **OpenID Connect authentication with ownCloud Server 10** to be used. With this, ownCloud providers can make the new generation **ownCloud Web** user interface available using the ownCloud Server 10 backend.
+	</description>
+	<namespace>Graph</namespace>
+	<version>0.2.0</version>
+	<licence>GPLv2</licence>
+	<author>ownCloud GmbH</author>
+	<dependencies>
+		<owncloud min-version="10.2" max-version="10" />
+		<php min-version="7.1" />
+	</dependencies>
+	<category>integration</category>
+	<documentation>
+		<admin>https://doc.owncloud.com/server/latest/admin_manual/configuration/user/oidc/index.html</admin>
+	</documentation>
+	<website>https://github.com/owncloud/graphapi</website>
+	<bugs>https://github.com/owncloud/graphapi/issues</bugs>
+  	<repository type="git">https://github.com/owncloud/graphapi.git</repository>
+  	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/openidconnect/openidconnect.png</screenshot>
+	<types>
+		<prevent_group_restriction/>
+	</types>
+</info>

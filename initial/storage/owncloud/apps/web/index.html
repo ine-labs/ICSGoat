@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="utf-8">
+  
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0">
+  
+    <meta name="theme-color" content="#375f7E">
+  
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+  
+  <title>ownCloud</title>
+  <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+  
+    <link href="css/web.css?1649687610584" rel="stylesheet">
+  
+  
+  <script src="js/require.js?1649687610584"></script>
+  
+  <style>
+    html,
+    body {
+      height: 100%
+    }
+    .splash-banner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      height: 100%;
+    }
+    #splash-loading{
+      height: 100%;
+    }
+    .splash-loading-hide {
+      display: none;
+    }
+    #loading {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #4c5f79;
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      -webkit-animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { -webkit-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+      to { -webkit-transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="splash-loading" class="splash-banner splash-loading-hide">
+    <div id="loading"></div>
+  </div>
+  <div id="owncloud"></div>
+  <noscript>
+    <div class="splash-banner"><h3>Please enable JavaScript</h3></div>
+  </noscript>
+  <script>
+    var loader = document.getElementById('splash-loading')
+    var loaderTimer = setTimeout(function () {  
+      loader.classList.remove('splash-loading-hide')
+    }, 1000);
+
+    function displayError() {
+      loader.classList.remove('splash-loading-hide')
+      loader.innerHTML = "<h3>Oops. Something went wrong.</h3>"
+    }
+
+    if (typeof requirejs === 'undefined') {
+      displayError()
+    } else {
+      requirejs.config({
+        baseUrl: "js",
+        paths: {"web-app-draw-io":"web-app-draw-io-8cee6376","web-app-external":"web-app-external-91b64d35","web-app-files":"web-app-files-a8153b5e","web-app-pdf-viewer":"web-app-pdf-viewer-e55d443e","web-app-preview":"web-app-preview-668564a9","web-app-search":"web-app-search-c721e450","web-app-text-editor":"web-app-text-editor-9eeea489","web-app-user-management":"web-app-user-management-6d7fc027","web-client":"web-client-9cc3c0a4","web-runtime":"web-runtime-6766268e","vendor":"vendor-569e5121","cache":"cache-40bfe919","useAppDefaults":"useAppDefaults-23e4907b","useRoute":"useRoute-1812bd9a","resources":"resources-a6033be8","index":"index-e33fde60","List":"List-2df825b8","error":"error-992e7064"},
+        ...{}
+      })
+
+      requirejs(['web-runtime'], function (runtime) {
+        clearTimeout(loaderTimer)
+        document.getElementById('splash-loading').classList.add('splash-loading-hide')
+        runtime.bootstrap('config.json').then(runtime.renderSuccess).catch(runtime.renderFailure)
+      }, function(e) {
+        displayError()
+        throw e
+      })
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+.icon-office365-word {
+	background-image: url('../img/x-office-document.svg');
+}
+.icon-office365-excel {
+	background-image: url('../img/x-office-spreadsheet.svg');
+}
+.icon-office365-powerpoint {
+	background-image: url('../img/x-office-presentation.svg');
+}
+.icon-wopi {
+	background-image: url('../img/app.svg');
+}

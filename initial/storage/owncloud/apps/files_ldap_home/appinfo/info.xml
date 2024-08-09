@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<info>
+	<id>files_ldap_home</id>
+	<name>LDAP Home Connector</name>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<summary>Integration of Windows User Directories via LDAP attributes</summary>
+	<description>
+This application enables an admin to mount user Windows Home directories within an ownCloud instance. Typically, Home Directories are configured on a network server with a root folder, such as Users, and then individual folders with the user’s name and permissions, such as jsmith or rkrause. With this application, the admin sets the network address for the file server in the ownCloud admin panel, as well as the attribute name to pull from LDAP to define this path for each user. At login, the path defined in LDAP or AD for each user is used to mount a user’s home directory, and every user has access to this directory in their ownCloud root folder.
+The LDAP Home Connector is different than the similar “External Storage: Windows Network Drives” application in that the LDAP Home Connector can only map one folder per user. Also, this application requires an attribute in LDAP or AD to specify the path to the user’s home directory. The application then uses a super-user account to access the home directory and interact with files and folders. More information is available in the LDAP Home Connector documentation.
+	</description>
+	<category>storage</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/files_ldap_home/owncloud-app-ldap.jpg</screenshot>
+	<version>0.5.0</version>
+	<types>
+		<filesystem/>
+	</types>
+	<namespace>Files_LDAP_Home</namespace>
+	<documentation>
+		<admin>admin-ldap-connector</admin>
+	</documentation>
+
+	<settings>
+		<admin>OCA\Files_LDAP_Home\AdminPanel</admin>
+	</settings>
+
+</info>

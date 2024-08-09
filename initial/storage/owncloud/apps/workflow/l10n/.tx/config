@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = ja_JP: ja
+
+[ownCloudEnterprise.workflow]
+file_filter = <lang>/workflow.po
+source_file = templates/workflow.pot
+source_lang = en
+type = PO

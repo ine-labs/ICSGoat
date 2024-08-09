@@ -1,0 +1,28 @@
+OC.L10N.register(
+    "oauth2",
+    {
+    "The application \"{app}\" is requesting access to your account. To authorize it, please log in first." : "Applikationen \"app\" beder om adgang til din konto. For at tillade det log venligst først ind.",
+    "The application was authorized successfully. You can now close this window." : "Applikationen var succesfuldt autoriseret. Du kan nu lukke dette vindue.",
+    "Request not valid" : "Andmodning ugyldig",
+    "This request is not valid. Please contact the administrator if this error persists." : "Denne forespørgsel er ugyldig. Kontakt venligst administratoren hvis denne fejl gentager sig. ",
+    "This request is not valid. Please contact the administrator of “%s” if this error persists." : "Denne forespørgsel er ugyldig. Kontakt venligst administratoren af \"%s\" hvis denne fejl gentager sig. ",
+    "The “%s“ application would like permission to access your account" : "\"%s\"-applikationen beder om adgang til din konto.",
+    "The application will gain access to your username and will be allowed to manage files, folders and shares." : "Applikationen vil få adgang til dit brugernavn og har tilladelse til at administrere filer, mapper og delinger.",
+    "Authorize" : "Autoriser",
+    "OAuth 2.0" : "OAuth 2.0",
+    "Registered clients" : "Registreride klienter",
+    "No clients registered." : "Ingen klienter registreret.",
+    "Name" : "Navn",
+    "Redirection URI" : "Omdirigerings-URL",
+    "Client Identifier" : "Klientidentifikator",
+    "Secret" : "Hemmelighed",
+    "Subdomains allowed" : "underdomæner tilladt",
+    "Are you sure you want to delete this item?" : "Er du sikker på, at du vil slette dette objekt?",
+    "Add client" : "Tilføj klient",
+    "Allow subdomains" : "Tillad subdomæner",
+    "Add" : "Tilføj",
+    "Authorized Applications" : "Autoriser Applikationer",
+    "No applications authorized." : "Ingen applikationer autoriseret. ",
+    "Switch user" : "Skift bruger"
+},
+"nplurals=2; plural=(n != 1);");

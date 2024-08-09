@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  pharmatech_site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      network_dmz:
+        ipv4_address: 172.16.2.20
+
+
+
+
+networks:
+
+  network_dmz:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.2.0/24

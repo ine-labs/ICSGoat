@@ -1,0 +1,19 @@
+{
+  "server" : "",
+  "theme": "https://localhost:9200/themes/owncloud/theme.json",
+  "version": "0.1.0",
+  "auth": {
+    "clientId": "",
+    "url": "",
+    "authUrl": ""
+  },
+  "apps" : [
+    "files",
+    "draw-io",
+    "preview",
+    "user-management",
+    "pdf-viewer",
+    "search"
+  ],
+  "applications" : []
+}

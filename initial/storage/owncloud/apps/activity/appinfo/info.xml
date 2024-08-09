@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<info>
+  <id>activity</id>
+  <name>Activity</name>
+  <summary>Keep track of events with Activity stream and email notifications</summary>
+  <description>
+The ownCloud Activity application enables users to not only get a summarized overview of all file and folder events in their ownCloud, but also to receive notifications for such via email. The user can configure their individual Activity preferences in their personal settings and can decide in detail which file or folder actions should be listed in the Activity stream (accessible via the app launcher) and also for which file or folder actions the users wants to receive email notifications.
+The bulk email notifications can either be sent out hourly, daily or weekly to fit the specific needs of the individual user.
+
+From creation of new files or folders, to file or folder changes, updates, restores from trash bin, sharing activities, comments, tags and downloads from public share links - the ownCloud Activity app gathers all file or folder related actions in one place for the user to review.
+For users with lots of activity it is possible to limit the Activity stream to 'Favorites' in order to avoid noise. Furthermore the application provides filters to give users the means to maintain overview by reducing entries to relevant information.
+
+And there you have it - a complete overview of all file and folder activities in your ownCloud with the additional ability to receive activity notifications via email in a time interval of your choice.
+Never again miss an important event related to content in ownCloud and always be up-to-date on all activities of your files and folders.
+  </description>
+  <licence>AGPL</licence>
+  <author>Thomas Müller, Frank Karlitschek, Joas Schilling, Tom Needham, Vincent Petry</author>
+  <version>2.7.0</version>
+  <default_enable/>
+  <types>
+    <filesystem/>
+  </types>
+  <use-migrations>true</use-migrations>
+  <documentation>
+    <admin>https://doc.owncloud.org/server/latest/admin_manual/configuration_server/activity_configuration.html</admin>
+  </documentation>
+  <website>https://github.com/owncloud/activity/</website>
+  <bugs>https://github.com/owncloud/activity/issues</bugs>
+  <repository type="git">https://github.com/owncloud/activity.git</repository>
+  <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/68550c2b7c53e6309132ca1c7b177adca976db0b/activity/activity.png</screenshot>
+  <category>tools</category>
+  <dependencies>
+    <owncloud min-version="10.9.0" max-version="10"/>
+  </dependencies>
+  <background-jobs>
+    <job>OCA\Activity\BackgroundJob\EmailNotification</job>
+    <job>OCA\Activity\BackgroundJob\ExpireActivities</job>
+  </background-jobs>
+  <navigation>
+    <order>1</order>
+    <route>activity.Activities.showList</route>
+  </navigation>
+  <settings>
+    <personal>OCA\Activity\PersonalPanel</personal>
+  </settings>
+  <commands>
+    <command>OCA\Activity\Command\SendEmails</command>
+  </commands>
+</info>

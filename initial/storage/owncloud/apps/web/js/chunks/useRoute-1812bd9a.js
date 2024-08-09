@@ -1,0 +1,1 @@
+define(["exports","./vendor-569e5121"],(function(e,r){"use strict";const t=()=>r.getCurrentInstance().proxy.$router;e.useRoute=()=>{const e=t(),u=r.ref();return u.value=e.currentRoute,e.afterEach((e=>u.value={...e})),r.readonly(u)},e.useRouter=t}));

@@ -1,0 +1,18 @@
+[
+	"App",
+	"MemberModel",
+	"MembersCollection",
+	"MembersInputView",
+	"MembersView",
+	"GroupModel",
+	"GroupsCollection",
+	"GroupsView",
+	"templates/app.handlebars",
+	"templates/list.handlebars",
+	"templates/listItem.handlebars",
+	"templates/membersList.handlebars",
+	"templates/membersListHeader.handlebars",
+	"templates/membersListItem.handlebars",
+	"templates/membersInput.handlebars",
+	"templates/membersInputItem.handlebars"
+]

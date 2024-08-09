@@ -1,0 +1,9 @@
+{ "translations": {
+    "FTP (Fly)" : "FTP (Fly)",
+    "Username" : "Käyttäjätunnus",
+    "Password" : "Salasana",
+    "Host" : "Isäntä",
+    "Port" : "Portti",
+    "Secure ftps://" : "Salattu ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

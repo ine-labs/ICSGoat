@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source
+
+script:
+  - bin/phpunit
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

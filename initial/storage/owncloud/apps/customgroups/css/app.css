@@ -1,0 +1,108 @@
+
+/* FIXME: must be in core somewhere */
+#customgroups .icon {
+	display: inline-block;
+}
+
+#customgroups .group-name-title a,
+#customgroups .grid td a {
+	visibility: hidden;
+	vertical-align: middle;
+}
+
+#customgroups .grid tr {
+	line-height: 50px;
+}
+
+#customgroups .avatar-column {
+	width: 32px;
+	padding-right: 0;
+}
+
+#customgroups .grid .select > * {
+	cursor: pointer;
+}
+
+#customgroups .group-name-title:hover a,
+#customgroups .grid tr:hover td a {
+	visibility: visible;
+}
+
+#customgroups .sidebar {
+	padding: 15px;
+}
+
+/* FIXME: integrate with core styles */
+#customgroups .sidebar .close {
+	position: absolute;
+	top: 9px;
+	right: 0;
+	padding: 15px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	opacity: .5;
+}
+
+#customgroups .sidebar .add-member-container {
+	clear: both;
+}
+
+#customgroups .avatar {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+}
+
+#customgroups .group-name-title .avatar {
+	margin-right: 8px;
+}
+
+#customgroups .member-input-field {
+	width: 90%;
+}
+
+#customgroups .group-member-list .user-display-name {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 1px;
+}
+
+#customgroups .loading-list {
+	margin-top: 10px;
+}
+
+#customgroups .icon-loading-small {
+	margin-left: 10px;
+}
+
+.customgroups-autocomplete-item {
+	display: flex;
+}
+
+.customgroups-autocomplete-item .autocomplete-item-text {
+	margin-left: 10px;
+	margin-right: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 32px;
+	vertical-align: middle;
+}
+
+.custom-group-buttons {
+	margin-top: 5px;
+}
+
+#custom-group-import-elem {
+	display: none;
+}
+
+.custom-group-import-label {
+	cursor: pointer;
+}
+
+.custom-group-import-form {
+	display: inline;
+}

@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+lang_map = ja_JP: ja
+
+[ownCloudEnterprise.ransomware_protection]
+file_filter = <lang>/ransomware_protection.po
+source_file = templates/ransomware_protection.pot
+source_lang = en
+type = PO
+

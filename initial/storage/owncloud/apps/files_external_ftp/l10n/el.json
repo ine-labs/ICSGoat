@@ -1,0 +1,10 @@
+{ "translations": {
+    "FTP (Fly)" : "FTP (Fly)",
+    "Username" : "Όνομα χρήστη",
+    "Password" : "Κωδικός πρόσβασης",
+    "Host" : "Διακομιστής",
+    "Root" : "Root",
+    "Port" : "Θύρα",
+    "Secure ftps://" : "Ασφαλής ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

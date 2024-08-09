@@ -1,0 +1,28 @@
+{ "translations": {
+    "Ransomware detected: Your account is locked (read-only for client access) to protect your data. Click here to unlock." : "Ransomware oppdaget: Kontoen din er låst (skrivebeskyttet for klientadgang) for å beskytte dine data. Klikk her for å låse opp.",
+    "Are you sure, you want to lock write access for your account?" : "Er du sikker på at du vil låse skriveadgang for kontoen din?",
+    "Ransomware Protection" : "Ransomware Beskyttelse",
+    "Are you sure, you want to re-enable write access for your account?" : "Er du sikker på at du vil re-aktivere skrivetilgang for kontoen din?",
+    "File was <strong>blocked</strong> by Ransomware Protection app." : "Filen ble <strong>blokkert</strong> av Ransomware Beskyttelse-appen.",
+    "Write access <strong>locked</strong> by Ransomware Protection app." : "Skrivetilgang låst av Ransomware Beskyttelse-appen.",
+    "Write access <strong>unlocked</strong> by Ransomware Protection app." : "Skrivetilgang låst opp av Ransomware Beskyttelse-appen.",
+    "File %2$s was blocked by Ransomware Protection app. Found pattern %1$s" : "Filen %2$s ble blokkert av Ransomware Beskyttelse-appen. Fant mønster %1$s",
+    "Account locked by Ransomware Protection app. Found pattern %1$s for path %2$s" : "Kontoen er låst av Ransomware Beskyttelse-appen. Funnet mønster %1$s for sti %2$s",
+    "Account locked by Ransomware Protection app. %1$s" : "Kontoen er låst av Ransomware Beskyttelse-appen. %1$s",
+    "Account unlocked: %1$s" : "Konto låst opp: %1$s",
+    "Found pattern %s for path %s" : "Funnet mønster %s for sti %s",
+    "Unlocked by occ" : "Låst opp av occ",
+    "Unlocked in security settings" : "Låst opp i sikkerhetsinnstillinger",
+    "Locked by Ransomware Protection app. Unlock your account in the security settings panel." : "Låst av Ransomware Beskyttelse-app. Lås opp kontoen din i sikkerhetsinnstillingspanelet.",
+    "File blocked by Ransomware Protection app. Found pattern %s" : "Fil blokkert av Ransomware Beskyttelse app. Fant mønster %s",
+    "Triggered manually in Personal Settings" : "Utløst manuelt i Personlige Innstillinger",
+    "Lock user accounts (read-only) for sync clients when a blacklist match occurred." : "Lås brukerkontoer (skrivebeskyttet) for synkroniseringsklienter når en svarteliste match oppstår.",
+    "Your account was locked by Ransomware Protection app due to intrusion attempts." : "Kontoen din var låst av Ransomware Beskyttelse-appen på grunn av inntrengingsforsøk.",
+    "- Locked on %s (server time), Timestamp: %s" : "- Låst på %s (servertid), Tidsstempel: %s",
+    "- Reason: %s" : "- Begrunnelse: %s",
+    "Write access will only be re-enabled by clicking the button below." : "Skrivetilgang vil kun bli aktivert igjen ved å klikke på knappen nedenfor.",
+    "Unlock your account" : "Lås opp kontoen din",
+    "Sync clients are enabled." : "Synkroniseringsklienter er aktivert.",
+    "Lock your account" : "Lås kontoen din"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<info>
+	<id>enterprise_key</id>
+	<name>Enterprise License Key</name>
+	<summary>ownCloud Enterprise Edition license key validator</summary>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="11" />
+	</dependencies>
+	<version>0.3.0</version>
+	<description>The Enterprise License Key application was checking the validity of an instance's subscription key for ownCloud Enterprise Edition. This app is obsoleted with ownCloud 10.5.0 and all functionality has been removed. You can safely disable it.</description>
+	<category>tools</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/enterprise_key/owncloud-app-enterprise_key_validator.jpg</screenshot>
+	<types>
+		<filesystem/>
+	</types>
+	<documentation>
+		<admin>admin-enterprise-license</admin>
+	</documentation>
+</info>

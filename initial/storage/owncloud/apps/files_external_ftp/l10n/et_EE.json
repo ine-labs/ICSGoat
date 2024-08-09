@@ -1,0 +1,9 @@
+{ "translations": {
+    "Username" : "Kasutajanimi",
+    "Password" : "Parool",
+    "Host" : "Host",
+    "Root" : "Juur",
+    "Port" : "Port",
+    "Secure ftps://" : "Turvaline ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

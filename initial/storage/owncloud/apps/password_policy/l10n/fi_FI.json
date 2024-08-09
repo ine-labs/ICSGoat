@@ -1,0 +1,23 @@
+{ "translations": {
+    "Saved" : "Tallennettu",
+    "Failed to save!" : "Tallentaminen epäonnistui!",
+    "Expiration date is required" : "Vanhenemispäivä vaaditaan",
+    "_Expiration date cannot exceed %n day_::_Expiration date cannot exceed %n days_" : ["Vanhenemispäivä ei voi ylittää %n päivää","Vanhenemispäivä ei voi ylittää %n päivää"],
+    "Password is too short. Minimum %d characters are required." : "Salasana on liian lyhyt. Tarvitaan vähintään %d merkkiä.",
+    "Password contains too few numbers. Minimum %d numbers are required." : "Salasana sisältää liian vähän numeroita. Tarvitaan vähintään %d numeroa.",
+    "Password contains invalid special characters. Only %s are allowed." : "Salasana sisältää virheellisiä erikoismerkkejä. Vain erikoismerkit %s ovat sallittuja.",
+    "Password contains too few special characters. Minimum %d special characters are required." : "Salasana sisältää liian vähän erikoismerkkejä. Tarvitaan vähintään %d erikoismerkkiä.",
+    "Password contains too few uppercase characters. Minimum %d uppercase characters are required." : "Salasana sisältää liian vähän isoja kirjaimia. Tarvitaan vähintään %d suurta kirjainta.",
+    "Password and public link expiration policies" : "Salasanan ja julkisen linkin vanhenemiskäytännöt",
+    "Minimum password requirements for user accounts and public links:" : "Salasanan vähimmäisvaatimukset käyttäjätilien ja julkisten linkkien osalta:",
+    "minimum characters" : "pieniä kirjaimia",
+    "uppercase letters" : "isoja kirjaimia",
+    "numbers" : "numeroita",
+    "special characters" : "erikoismerkkejä",
+    "Define special characters:" : "Määritä erikoismerkit:",
+    "Public link expiration policy:" : "Julkisen linkin vanhenemiskäytäntö:",
+    "days until link expires if password is set" : "päivää kunnes linkki vanhenee, jos salasana on asetettu",
+    "days until link expires if password is not set" : "päivää kunnes linkki vanhenee, jos salasanaa ei ole asetettu",
+    "Save" : "Tallenna"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

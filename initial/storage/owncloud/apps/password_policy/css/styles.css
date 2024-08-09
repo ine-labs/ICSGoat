@@ -1,0 +1,45 @@
+/**
+ *
+ * @copyright Copyright (c) 2018, ownCloud GmbH
+ * @license GPL-2.0
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#password-policy input[type='number'] {
+	width: 40px;
+}
+
+#password_policy .indented {
+	margin-left: 24px;
+}
+
+#password_policy #confirm_password.password-mismatch,
+#password_policy #new_password.password-mismatch {
+	color: red;
+}
+
+#password_policy #submit {
+	margin: 5px;
+	width : calc(100% - 10px);
+}
+
+#password_policy .margin-add-top {
+	margin-top: 24px;
+}
+
+#password_policy #password_hint {
+	margin-top: 5px;
+}

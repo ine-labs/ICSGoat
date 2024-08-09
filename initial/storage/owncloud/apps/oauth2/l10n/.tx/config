@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+lang_map = ja_JP: ja
+
+[owncloud.oauth2]
+file_filter = <lang>/oauth2.po
+source_file = templates/oauth2.pot
+source_lang = en
+type = PO
+

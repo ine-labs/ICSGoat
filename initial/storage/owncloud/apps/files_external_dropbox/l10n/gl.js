@@ -1,0 +1,9 @@
+OC.L10N.register(
+    "files_external_dropbox",
+    {
+    "Error verifying OAuth2 Code for " : "Produciuse un erro a verificar o código OAuth2 para",
+    "Dropbox V2" : "Dropbox V2",
+    "Step 2 failed. Exception: %s" : "Fallou o paso 2. Excepción: %s",
+    "Invalid Request Params!!" : "Os parámetros da solicitude non son válidos"
+},
+"nplurals=2; plural=(n != 1);");

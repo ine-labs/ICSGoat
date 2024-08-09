@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1280" viewBox="0 0 1920 1280">
+  <defs>
+    <circle id="owncloud-ee-background-a" cx="1772" cy="1086" r="258"/>
+    <circle id="owncloud-ee-background-b" cx="-90" cy="409.5" r="258"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="1920" height="1280" fill="#041E42"/>
+    <use fill="#4E85C8" fill-opacity=".08" xlink:href="#owncloud-ee-background-a"/>
+    <use fill="#4E85C8" fill-opacity=".08" xlink:href="#owncloud-ee-background-b"/>
+    <circle cx="1605" cy="1265" r="257.5" stroke="#4E85C8" stroke-opacity=".4"/>
+    <circle cx="-90" cy="640" r="257.5" stroke="#4E85C8" stroke-opacity=".4"/>
+  </g>
+</svg>

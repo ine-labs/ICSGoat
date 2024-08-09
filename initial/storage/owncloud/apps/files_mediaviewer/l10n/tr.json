@@ -1,0 +1,15 @@
+{ "translations": {
+    "Close" : "Kapat",
+    "Download" : "İndir",
+    "Fullscreen" : "Tam Ekran",
+    "Loading" : "Yükleniyor",
+    "Mute" : "Sessiz",
+    "Next" : "Sonraki",
+    "Play" : "Oynat",
+    "Previous" : "Önceki",
+    "Replay" : "Yeniden Oynat",
+    "Rotate 90° counterclockwise" : "90° saat yönünün tersine döndür",
+    "Zoom in" : "Yakınlaştır",
+    "Zoom out" : "uzaklaştır"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}

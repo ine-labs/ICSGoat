@@ -1,0 +1,307 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    color: #195ad7;
+    font-size: 13px;
+    pointer-events: none;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+.svg-container {
+    height: 800px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#BioreactorTemperature-fermentation {
+    top: 60px;
+    left: 720px;
+  }
+  
+  #BioreactorDissolvedOxygen-fermentation {
+    top: 135px;
+    left: 769px;
+  }
+  
+  #NutrientSupplyValve-fermentation {
+    top: 32px;
+    left: 440px;
+  }
+  
+  #BioreactorLevel-fermentation {
+    top: 40px;
+    left: 630px;
+  }
+  
+  #BioreactorPH-fermentation {
+    top: 185px;
+    left: 702px;
+  }
+  #BioreactorAgitationSpeed-fermentation {
+    top: 137px;
+    left: 500px;
+  }
+  
+  #WasteRemovalValve-fermentation {
+    top: 224px;
+    left: 668px;
+  }
+  
+  #Temperature-mixing_and_blending {
+    top: 246px;
+    left: 259px;
+  }
+  #MixerStatus-mixing_and_blending {
+    left: 413px;
+    top: 358px;
+  }
+  
+  #FlowRate-mixing_and_blending {
+    top: 266px;
+    left: 370px;
+  }
+  
+  #Pressure-mixing_and_blending {
+    left: 207px;
+    top: 245px;
+  }
+  
+  #IngredientQuantity-mixing_and_blending {
+    left: 343px;
+    top: 377px;
+  }
+  
+  #MixerSpeed-formulation {
+    top: 568px;
+    left: 217px;
+  }
+  
+  #MixerStatus-formulation {
+    top: 544px;
+    left: 127px;
+  }
+  
+  #Humidity-formulation {
+    left: 114px;
+    top: 421px;
+  }
+  #Temperature-formulation {
+    left: 114px;
+    top: 404px;
+  }
+  
+  #ProductLevel-formulation {
+    left: 199px;
+    top: 429px;
+  }
+  
+  #analog_1-filtration_and_purification {
+    top: 416px;
+    left: 632px;
+  }
+  
+  #analog_2-filtration_and_purification {
+    top: 416px;
+    left: 543px;
+  }
+  
+  #analog_3-filtration_and_purification {
+    top: 529px;
+    left: 673px;
+  }
+  
+  #analog_4-filtration_and_purification {
+    top: 470px;
+    left: 498px;
+  }
+  #binary_1-filtration_and_purification {
+    top: 518px;
+    left: 795px;
+  }
+  
+  #binary_2-filtration_and_purification {
+    top: 436px;
+    left: 424px;
+  }
+  
+  /* filling */
+  
+  #coil_0-filling_and_packaging {
+    top: 817px;
+    left: 118px;
+  }
+  
+  #coil_1-filling_and_packaging {
+    top: 747px;
+    left: 216px;
+  }
+  
+  #coil_2-filling_and_packaging {
+    top: 747px;
+    left: 256px;
+  }
+  #coil_3-filling_and_packaging {
+    top: 747px;
+    left: 294px;
+  }
+  #coil_4-filling_and_packaging {
+    top: 747px;
+    left: 332px;
+  }
+  #coil_5-filling_and_packaging {
+    top: 747px;
+    left: 371px;
+  }
+  #coil_6-filling_and_packaging {
+    top: 747px;
+    left: 408px;
+  }
+  #coil_7-filling_and_packaging {
+    top: 747px;
+    left: 446px;
+  }
+  
+  #input_register_pressure_0-filling_and_packaging{
+      top: 648px;
+      left: 204px;
+  }
+  #input_register_pressure_1-filling_and_packaging{
+      top: 648px;
+      left: 243px;
+  }
+  #input_register_pressure_2-filling_and_packaging{
+      top: 648px;
+      left: 278px;
+  }
+  #input_register_pressure_3-filling_and_packaging{
+      top: 648px;
+      left: 316px;
+  }
+  #input_register_pressure_4-filling_and_packaging{
+      top: 648px;
+      left: 355px;
+  }
+  #input_register_pressure_5-filling_and_packaging{
+      top: 648px;
+      left: 393px;
+  }
+  #input_register_pressure_6-filling_and_packaging{
+      top: 648px;
+      left: 430px;
+  }
+  #input_register_pressure_7-filling_and_packaging{
+      top: 648px;
+      left: 468px;
+  }
+  
+  
+  #input_register_level_0-filling_and_packaging{
+      top: 735px;
+      left: 173px;
+  }
+  #input_register_level_1-filling_and_packaging{
+      top: 735px;
+      left: 216px;
+  }
+  #input_register_level_2-filling_and_packaging{
+      top: 735px;
+      left: 256px;
+  }
+  #input_register_level_3-filling_and_packaging{
+      top: 735px;
+      left: 293px;
+  }
+  #input_register_level_4-filling_and_packaging{
+      top: 735px;
+      left: 331px;
+  }
+  #input_register_level_5-filling_and_packaging{
+      top: 735px;
+      left: 370px;
+  }
+  #input_register_level_6-filling_and_packaging{
+      top: 735px;
+      left: 408px;
+  }
+  #input_register_level_7-filling_and_packaging{
+      top: 735px;
+      left: 446px;
+  }
+  
+  #holding_register_0-filling_and_packaging{
+      top: 817px;
+      left: 205px;
+  }
+  #holding_register_1-filling_and_packaging{
+      top: 817px;
+      left: 242px;
+  }
+  #holding_register_2-filling_and_packaging{
+      top: 817px;
+      left: 281px;
+  }
+  #holding_register_3-filling_and_packaging{
+      top: 817px;
+      left: 319px;
+  }
+  #holding_register_4-filling_and_packaging{
+      top: 817px;
+      left: 357px;
+  }
+  #holding_register_5-filling_and_packaging{
+      top: 817px;
+      left: 395px;
+  }
+  #holding_register_6-filling_and_packaging{
+      top: 817px;
+      left: 433px;
+  }
+  #holding_register_7-filling_and_packaging{
+      top: 817px;
+      left: 472px;
+  }
+  
+  
+  #level-sensor-raw_material_handling{
+      top: 57px;
+      left:130px;
+  }
+  #flow-meter-raw_material_handling{
+      top: 143px;
+      left:304px;
+  }
+  #MixerSpeed-mixing_and_blending{
+      top:344px;
+      left: 414px;
+  }
+  
+  #TemperatureSetpoint-mixing_and_blending{
+      top: 226px;
+      left: 265px;
+  }
+  
+  
+  #valve-pump-raw_material_handling{
+      top: 143px;
+      left: 251px;
+  }

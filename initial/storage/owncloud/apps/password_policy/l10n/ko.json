@@ -1,0 +1,25 @@
+{ "translations": {
+    "Saved" : "저장됨",
+    "Failed to save!" : "저장할 수 없음!",
+    "Expiration date is required" : "만료 날짜를 지정해야 함",
+    "_Expiration date cannot exceed %n day_::_Expiration date cannot exceed %n days_" : ["만료 날짜가 %n일 이상일 수 없음"],
+    "Password is too short. Minimum %d characters are required." : "암호가 너무 짧습니다. 최소 %d자 이상이어야 합니다.",
+    "Password contains too few lowercase characters. Minimum %d lowercase characters are required." : "암호에 소문자가 너무 적습니다. 소문자가 최소 %d개 이상 있어야 합니다.",
+    "Password contains too few numbers. Minimum %d numbers are required." : "암호에 숫자가 너무 적습니다. 숫자가 최소 %d개 이상 있어야 합니다.",
+    "Password contains invalid special characters. Only %s are allowed." : "암호에 잘못된 특수 문자가 있습니다. %s 글자만 사용할 수 있습니다.",
+    "Password contains too few special characters. Minimum %d special characters are required." : "암호에 특수 문자가 너무 적습니다. 특수 문자가 최소 %d개 이상 있어야 합니다.",
+    "Password contains too few uppercase characters. Minimum %d uppercase characters are required." : "암호에 대문자가 너무 적습니다. 대문자가 최소 %d개 이상 있어야 합니다.",
+    "Password and public link expiration policies" : "암호 및 공개 링크 만료 정책",
+    "Minimum password requirements for user accounts and public links:" : "사용자 암호와 공개 링크의 최소 암호 정책:",
+    "minimum characters" : "최소 글자 수",
+    "lowercase letters" : "소문자",
+    "uppercase letters" : "대문자",
+    "numbers" : "숫자",
+    "special characters" : "특수 문자",
+    "Define special characters:" : "특수 문자 지정:",
+    "Public link expiration policy:" : "공개 링크 만료 날짜 정책:",
+    "days until link expires if password is set" : "일(암호가 설정된 경우)",
+    "days until link expires if password is not set" : "일(암호가 설정되지 않은 경우)",
+    "Save" : "저장"
+},"pluralForm" :"nplurals=1; plural=0;"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<info>
+	<id>sharepoint</id>
+	<name>External Storage: SharePoint</name>
+	<summary>Integrate SharePoint as an external storage</summary>
+	<description>
+This application enables admins to configure ownCloud to connect to SharePoint 2007, 2010 and 2013 document libraries and provide access to end users. By assigning a SharePoint document library to a group, user or the whole system, admins can easily provide mobile and desktop sync for files stored in SharePoint.
+Once a SharePoint document library is mounted by the admin, users see a folder structure that mirrors their SharePoint document library. Users can selectively sync these files to the desktop, or access them on a mobile device like any other ownCloud file. The files, however, remain stored in SharePoint as the system of record. Note: this application requires the installation of the PHP SOAP module, available in your distribution. More information is available in the SharePoint documentation.
+       	</description>
+	<category>storage</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/sharepoint/owncloud-app-external_storage_sharepoint.jpg</screenshot>
+        <licence>OCL</licence>
+        <author>ownCloud GmbH / Jesus Macias Portela</author>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<version>0.4.0</version>
+	<types>
+        	<filesystem/>
+	</types>
+	<documentation>
+		<admin>admin-sharepoint</admin>
+	</documentation>
+	<settings>
+		<admin>OCA\Sharepoint\AdminPanel</admin>
+		<admin>OCA\Sharepoint\BadAdminPanel</admin>
+		<personal>OCA\Sharepoint\PersonalPanel</personal>
+	</settings>
+</info>

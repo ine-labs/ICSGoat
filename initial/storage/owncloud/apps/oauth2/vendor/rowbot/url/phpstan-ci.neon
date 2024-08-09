@@ -1,0 +1,15 @@
+includes:
+    - phpstan.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+parameters:
+    ignoreErrors:
+        # The strict rules disallow the use of empty() by default due to its
+        # unexpected behavior on certain types. However, it is a valid construct
+        # to use on arrays and we only use it with arrays.
+        - '#Construct empty\(\) is not allowed\. Use more strict comparison\.#'
+
+        # This is occuring because we are using the result of mb_strlen() with numeric operators.
+        # See https://github.com/phpstan/phpstan/issues/1322
+        - '#Only numeric types are allowed in [-+], int\|false given on the left side\.#'

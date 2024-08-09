@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<info>
+	<id>systemtags_management</id>
+	<name>Collaborative Tags Management</name>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<version>0.4.1</version>
+	<summary>Admin interface for managing Collaborative Tags of an ownCloud instance</summary>
+	<description>
+This application is a complement to the 'Collaborative Tags' application to give admins control over the collaborative tags of an instance. Admins can add new tags, delete and update existing tags and specify tag properties in addition.
+Tag properties comprise:
+- Visible - visible and assignable by any user
+- Restricted - only specified groups can edit or assign these tags
+- Static - only specified groups can assign these tags
+- Invisible - only admins can see these tags
+	</description>
+	<category>tools</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/systemtags_management/owncloud-app-system-tags.jpg</screenshot>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<settings>
+		<admin>OCA\Systemtags_Management\AdminPanel</admin>
+	</settings>
+</info>

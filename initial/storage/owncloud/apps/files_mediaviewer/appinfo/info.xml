@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<info>
+	<id>files_mediaviewer</id>
+	<name>Media Viewer</name>
+	<summary>Explore, show and share your media collections</summary>
+	<description>
+A media viewer that adds image and video viewing capabilities to Files view and Public Links.
+
+**Features**
+
+- Support for a large selection of image and video formats (depending on server setup)
+- Fullscreen, zoomable slideshow view integrated with the Files view and Public Links
+- Image rotation
+- Sort images by name or date
+- Image and video download straight from the slideshow
+- Native SVG support
+- Mobile support</description>
+	<licence>GPLv2</licence>
+	<author>Felix Heidecke</author>
+	<version>1.0.5</version>
+	<namespace>Mediaviewer</namespace>
+	<documentation>
+		<developer>https://github.com/owncloud/files_mediaviewer/blob/master/README.md</developer>
+	</documentation>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/files_mediaviewer/ownCloud-app-mediaviewer.jpg</screenshot>
+	<category>multimedia</category>
+	<website>https://github.com/owncloud/files_mediaviewer</website>
+	<bugs>https://github.com/owncloud/files_mediaviewer/issues</bugs>
+	<repository type="git">https://github.com/owncloud/files_mediaviewer.git</repository>
+	<dependencies>
+		<owncloud min-version="10" max-version="10"/>
+	</dependencies>
+	<default_enable />
+</info>

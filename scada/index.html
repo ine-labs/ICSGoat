@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCADA Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .iframe-container, .meters-container, .alerts-container, .criteria-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .meter {
+            margin: 20px 0;
+        }
+        .meter label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .meter input[type="range"] {
+            width: 100%;
+        }
+        .alerts-container {
+            max-height: 400px; /* Adjust as needed */
+            overflow-y: auto;
+        }
+        .alert {
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        .criteria {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        PharmaTech SCADA Dashboard
+    </div>
+    <div class="dashboard">
+        <div class="iframe-container">
+            <h2>HMI Interface</h2>
+            <iframe src="http://hmi.pharmatech.local:5000"></iframe>
+        </div>
+        <div class="meters-container">
+            <h2>Bioreactor Monitor</h2>
+            <div class="meter">
+                <label for="bioreactorTemperature">Bioreactor Temperature (°C)</label>
+                <input type="range" id="bioreactorTemperature" name="bioreactorTemperature" min="0" max="100" value="0" disabled>
+            </div>
+            <div class="meter">
+                <label for="bioreactorPH">Bioreactor pH</label>
+                <input type="range" id="bioreactorPH" name="bioreactorPH" min="0" max="14" value="0" disabled>
+            </div>
+            <div class="meter">
+                <label for="bioreactorDissolvedOxygen">Bioreactor Dissolved Oxygen (%)</label>
+                <input type="range" id="bioreactorDissolvedOxygen" name="bioreactorDissolvedOxygen" min="0" max="100" value="0" disabled>
+            </div>
+            <div class="meter">
+                <label for="bioreactorLevel">Bioreactor Level (L)</label>
+                <input type="range" id="bioreactorLevel" name="bioreactorLevel" min="0" max="100" value="0" disabled>
+            </div>
+            <div class="meter">
+                <label for="bioreactorAgitationSpeed">Bioreactor Agitation Speed (RPM)</label>
+                <input type="range" id="bioreactorAgitationSpeed" name="bioreactorAgitationSpeed" min="0" max="200" value="0" disabled>
+            </div>
+            <div>
+                <h2>Production</h2>
+                <div class="meter">
+                    <label for="production">Total Production Count</label>
+                    <input type="range" id="production" name="production" min="0" max="1000" value="0" disabled>
+                    <span>Note: Maximum of 1000 is allowed per day.</span>
+                </div>
+            </div>
+        </div>
+        <div class="alerts-container" id="alerts-container">
+            <h2>Alerts</h2>
+            <div id="alerts"></div>
+        </div>
+        <div class="criteria-container">
+            <h2>Important Information</h2>
+            <div class="criteria">
+                <strong>Current Shift:</strong> Night 
+            </div>
+            <div class="criteria">
+                <strong>Operator:</strong> Not Assigned
+            </div>
+            <div class="criteria">
+                <strong>System Status:</strong> Not Operational
+            </div>
+        </div>
+    </div>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('http://hmi.pharmatech.local:5000/data');
+                const data = await response.json();
+                updateMeters(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        async function fetchAlerts() {
+            try {
+                const response = await fetch('http://hmi.pharmatech.local:5000/alerts');
+                const data = await response.json();
+                updateAlerts(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function updateMeters(data) {
+            data.forEach(item => {
+                if (item.process_name === 'fermentation') {
+                    console.log(item.variable_name, item.value);
+                    switch (item.variable_name) {
+                        case 'BioreactorTemperature':
+                            document.getElementById('bioreactorTemperature').value = item.value;
+                            break;
+                        case 'BioreactorPH':
+                            document.getElementById('bioreactorPH').value = item.value;
+                            break;
+                        case 'BioreactorDissolvedOxygen':
+                            document.getElementById('bioreactorDissolvedOxygen').value = item.value;
+                            break;
+                        case 'BioreactorLevel':
+                            document.getElementById('bioreactorLevel').value = item.value;
+                            break;
+                        case 'BioreactorAgitationSpeed':
+                            document.getElementById('bioreactorAgitationSpeed').value = item.value;
+                            break;
+                    }
+                }
+                if (item.process_name === 'filling_and_packaging') {
+                    if (item.variable_name === 'bottle_count') {
+                        document.getElementById('production').value = item.value;
+                    }
+                }
+            });
+        }
+
+        function updateAlerts(data) {
+            console.log(data);
+            const alertsContainer = document.getElementById('alerts');
+            // Clear existing alerts
+            alertsContainer.innerHTML = '';
+            data.forEach(item => {
+                console.log(item.message);
+                const alert = document.createElement('div');
+                alert.className = 'alert';
+                alert.innerHTML = `<strong>Alert!</strong> ${item.message}`;
+                alertsContainer.prepend(alert); // Prepend to place the newest alert at the top
+            });
+        }
+
+        setInterval(fetchData, 5000); // Fetch data every 5 seconds
+        setInterval(fetchAlerts, 5000); // Fetch alerts every 5 seconds
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+  - nightly
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
+
+install:
+  - flags="--dev --no-progress --no-suggest"
+  - if [[ $(phpenv version-name) == "5.6" || $(phpenv version-name) == "7.0" ]]; then SKIP_STATIC_ANALYSIS=true; fi
+  - if [[ $SKIP_STATIC_ANALYSIS != true ]]; then composer require $flags phpstan/phpstan-deprecation-rules phpstan/phpstan-strict-rules; fi
+  - composer require $flags php-coveralls/php-coveralls:^2.1
+  - composer install --no-interaction --no-progress --no-suggest --optimize-autoloader
+
+before_script:
+  - mkdir -p build/logs
+
+script:
+  - if [[ $SKIP_STATIC_ANALYSIS != true ]]; then ./vendor/bin/phpstan analyse -c phpstan-ci.neon -l max src; fi
+  - phpunit_flags="--verbose --coverage-clover build/logs/clover.xml"
+  - if [[ $TRAVIS_PHP_VERSION != nightly ]]; then ./vendor/bin/phpunit $phpunit_flags; fi
+  - if [[ $TRAVIS_PHP_VERSION == nightly ]]; then phpdbg -qrr ./vendor/bin/phpunit $phpunit_flags; fi
+
+after_success:
+  - travis_retry php ./vendor/bin/php-coveralls

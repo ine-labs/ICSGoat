@@ -1,0 +1,38 @@
+{
+  "name": "interfasys/lognormalizer",
+  "type": "library",
+  "description": "Parses variables and converts them to string so that they can be logged",
+  "keywords": [
+    "log",
+    "normalizer"
+  ],
+  "homepage": "https://github.com/interfasys/lognormalizer",
+  "minimum-stability": "dev",
+  "license": "AGPL-3.0",
+  "authors": [
+    {
+      "name": "Olivier Paroz",
+      "email": "dev-lognormalizer@interfasys.ch",
+      "role": "Developer",
+      "homepage": "http://www.interfasys.ch"
+    },
+    {
+      "name": "Jordi Boggiano",
+      "email": "j.boggiano@seld.be",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "codeclimate/php-test-reporter": "dev-master",
+    "codacy/coverage": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "InterfaSys\\LogNormalizer\\": "src/"
+    }
+  }
+}

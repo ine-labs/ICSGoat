@@ -1,0 +1,25 @@
+{ "translations": {
+    "Select a tag" : "حدِّد علامة",
+    "At least one of the given rules is invalid." : "واحدة من القواعد المقدمة على الأقل غير صالحة.",
+    "Firewall rules saved." : "تم حفظ قواعد جدار الحماية.",
+    "An error occurred while saving the rules." : "حدث خطأ أثناء حفظ القواعد.",
+    "Firewall debug level saved." : "تم حفظ مستوى تصحيح أخطاء جدار الحماية.",
+    "An error occurred while saving debug level." : "حدث خطأ أثناء حفظ مستوى تصحيح الأخطاء.",
+    "Firewall" : "جدار الحماية",
+    "Access to this resource has been forbidden by a file firewall rule." : "تحظر قاعدة جدار حماية الملف الوصول إلى هذه الموارد.",
+    "If you feel this is an error, please contact your administrator or %slogout%s." : "إذا شعرت بأن هذا خطأ، يُرجى الاتصال بمسؤولك أو بـ %slogout%s.",
+    "File Firewall" : "جدار حماية الملف",
+    "Requests are checked against all groups of rules that are defined below." : "يتم فحص الطلبات وفقًا لجميع مجموعات القواعد المحددة أدناه.",
+    "A request is blocked when at least one group matches the request." : "يتم حظر الطلب عند وجود مجموعة واحدة على الأقل مطابقة للطلب.",
+    "A group matches a request when all rule conditions in the group evaluate to true." : "تطابق مجموعة طلبًا عند تقييم جميع شروط القاعدة الموجودة في المجموعة على أنها صحيحة.",
+    "Save Rules" : "حفظ القواعد",
+    "Logging" : "جارٍ التسجيل",
+    "Off" : "إيقاف التشغيل",
+    "Blocked Requests Only" : "الطلبات المحظورة فقط",
+    "All Requests" : "جميع الطلبات",
+    "To log Blocked Requests Only the %s system log level %s must be set to include warnings." : "لتسجيل الطلبات المحظورة فقط، يجب ضبط %s مستوى سجل النظام %s لتضمين التحذيرات.",
+    "To log All Requests the %s system log level %s must be set to include info." : "لتسجيل جميع الطلبات، يجب ضبط %s مستوى سجل النظام %s لتضمين المعلومات.",
+    "Logging All Requests can generate a large amount of log data." : "يمكن أن يؤدي تسجيل جميع الطلبات إلى إنتاج كمية كبيرة من بيانات السجل.",
+    "It is recommended to only select All Requests for short-term checking of rule settings." : "يُنصح بتحديد جميع الطلبات للتحقق من إعدادات القاعدة لفترة قصيرة فقط."
+},"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
+}

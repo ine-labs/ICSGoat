@@ -1,0 +1,40 @@
+#subject {
+	width: 720px;
+}
+
+#message {
+	width: 720px;
+	height: 350px;
+}
+
+#app-content hr {
+	width: 85%;
+	border: none;
+	border-bottom: solid 1px #ddd;
+}
+
+#announcement_submit_msg.success {
+	color: #fff;
+	background-color: #47a447;
+	border-radius: 3px;
+	padding: 3px;
+}
+#announcement_submit_msg.error {
+	color: #fff;
+	background-color: #d2322d;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.emptycontent-admin {
+	position: inherit !important;
+	margin-top: 50px !important;
+}
+
+.announcementcenter .delete-link {
+	display: none;
+}
+
+.announcementcenter .section:hover .delete-link {
+	display: inline;
+}

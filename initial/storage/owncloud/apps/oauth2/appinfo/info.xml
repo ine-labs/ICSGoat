@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<info>
+    <id>oauth2</id>
+    <name>OAuth2</name>
+    <summary>OAuth2 token-based authorization interface</summary>
+    <description>OAuth2 is the open industry-standard protocol for secure authorization of clients. It can be used as a way for users to grant web services or applications access to their data stored in ownCloud.
+The use of OAuth2 in ownCloud greatly enhances security while facilitating the integration of third party applications or web services:
+
+- Connect ownCloud clients (Desktop, Android, iOS) through a standardized and secure authorization flow
+- Provide a user authorization interface for developers to facilitate the integration of ownCloud in third party applications
+
+### Benefits provided by the OAuth2 interface
+
+- No user passwords are being stored in ownCloud clients or third party web applications
+
+Instead of connecting clients with username/password, a user only needs to provide the information once in the browser. The respective client is then provided with a unique access token which is used for future connections to the ownCloud server. ownCloud clients or third party applications never get to know the actual login credentials.
+
+- The use of different access tokens per client provides the ability to selectively revoke user sessions
+
+When using OAuth2 a unique access token is generated for each device or third party application. Users can check their authorized clients in the personal settings and have the ability to selectively invalidate access tokens when e.g. a device is lost. This strengthens control and access security significantly.
+
+### Resources
+- [OAuth - Wikipedia](https://en.wikipedia.org/wiki/OAuth)
+- [OAuth protocol web page](https://oauth.net/2/)</description>
+    <licence>AGPL</licence>
+    <author>Project Seminar "sciebo@Learnweb" of the University of Münster, Thomas Müller</author>
+    <version>0.5.2</version>
+    <namespace>OAuth2</namespace>
+    <category>security</category>
+    <website>https://github.com/owncloud/oauth2</website>
+    <bugs>https://github.com/owncloud/oauth2/issues</bugs>
+    <repository type="git">https://github.com/owncloud/oauth2.git</repository>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/oauth2/oauth2.jpg</screenshot>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/oauth2/ownCloud-oauth2-app-auth-request.jpg</screenshot>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/oauth2/ownCloud-oauth2-app-authorized.jpg</screenshot>
+    <dependencies>
+        <owncloud min-version="10.3" max-version="10"/>
+    </dependencies>
+    <types>
+        <authentication/>
+    </types>
+    <auth-modules>
+        <module>OCA\OAuth2\AuthModule</module>
+    </auth-modules>
+    <settings>
+        <personal>OCA\OAuth2\Panels\PersonalPanel</personal>
+        <admin>OCA\OAuth2\Panels\AdminPanel</admin>
+    </settings>
+    <background-jobs>
+        <job>OCA\OAuth2\BackgroundJob\CleanUp</job>
+    </background-jobs>
+    <use-migrations>true</use-migrations>
+    <commands>
+        <command>OCA\OAuth2\Commands\AddClient</command>
+        <command>OCA\OAuth2\Commands\RemoveClient</command>
+        <command>OCA\OAuth2\Commands\ListClients</command>
+        <command>OCA\OAuth2\Commands\ModifyClient</command>
+    </commands>
+</info>

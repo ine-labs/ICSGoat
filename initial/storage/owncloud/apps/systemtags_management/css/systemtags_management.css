@@ -1,0 +1,27 @@
+/**
+ * ownCloud System Tags Management
+ *
+ * @author Joas Schilling <nickvergessen@owncloud.com>
+ * @copyright 2016 ownCloud, Inc.
+ *
+ * This code is covered by the ownCloud Commercial License.
+ *
+ * You should have received a copy of the ownCloud Commercial License
+ * along with this program. If not, see <https://owncloud.com/licenses/owncloud-commercial/>.
+ *
+ */
+
+.systemtags_management .select2-container, #tagmanager_name {
+	min-width: 240px;
+}
+
+.systemtags_management .icon-delete {
+	display: inline-block;
+	vertical-align: bottom;
+	padding: 10px;
+	opacity: .5;
+}
+
+.systemtags_management .autotagging .icon-delete {
+	padding: 2px 10px;
+}

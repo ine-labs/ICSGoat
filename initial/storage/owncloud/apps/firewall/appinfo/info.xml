@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<info>
+	<id>firewall</id>
+	<name>File Firewall</name>
+	<summary>Rule-based access control engine to enforce fine-grained compliance policies</summary>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<version>2.10.3</version>
+	<description>
+ownCloud allows it's administrators to set a number of file access and sharing restrictions to prevent uncontrolled data activity. To provide an even finer-grained control of access and sharing activities in security-sensitive business environments with strong compliance requirements, ownCloud Enterprise offers a File Firewall that enables administrators to specify sophisticated rules to restrict access per group, system tags, upload size, client devices, IP address, time of day, and many more criteria. For additional flexibility the File Firewall also supports regular expressions.
+
+The File Firewall is an extension that inspects requests sent to an ownCloud Server. If the conditions that have been set by the administrator are met, it prevents ownCloud from executing any code. If the rules are not met, the connection, code execution and - ultimately file transfer or action - are allowed. For full transparency of the File Firewall an entry to the ownCloud log can be added for each rule evaluation or only for denied requests. With that the results of firewall interceptions are fully logged in the ownCloud log for potential auditing and reporting purposes. It is furthermore possible to specify a separate log file for the File Firewall to maintain overview and to separate duties between auditors.
+
+In short, the ownCloud File Firewall acts as an additional security layer on the file level by preselecting and declining undesired requests. With the File Firewall your ownCloud environment not only becomes a lot more secure but also supports your IT department with a highly-sophisticated rules engine and administrator-friendly web-interface for effective rule management. Administrators can find the File Firewall configuration panel in the 'Security' section of the administration settings.
+
+More detailed information is available in the ownCloud File Firewall documentation.
+	</description>
+	<category>security</category>
+	<documentation>
+		<admin>https://doc.owncloud.org/server/latest/admin_manual/enterprise/firewall/file_firewall.html</admin>
+    	</documentation>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/firewall/owncloud-app-firewall.jpg</screenshot>
+	<types>
+		<filesystem/>
+		<dav/>
+	</types>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<settings>
+		<admin>OCA\Firewall\AdminPanel</admin>
+	</settings>
+	<settings-sections>
+		<admin>OCA\Firewall\AdminSection</admin>
+	</settings-sections>
+	<sabre>
+		<plugins>
+			<plugin>OCA\Firewall\Dav\FirewallPlugin</plugin>
+		</plugins>
+	</sabre>
+</info>

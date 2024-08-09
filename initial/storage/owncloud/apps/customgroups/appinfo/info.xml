@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<info>
+	<id>customgroups</id>
+	<name>Custom Groups</name>
+	<namespace>CustomGroups</namespace>
+	<summary>Enhance collaboration with user-defined sharing groups</summary>
+	<description>
+When working in larger organizations, the number of users in a collaboration platform like ownCloud quickly reaches a point where the segmentation of users becomes very relevant.
+With ownCloud's Custom Groups functionality not only admins but also users are able to create groups of users for quick and easy sharing purposes.
+This makes it easier than ever for users to collaborate and work efficiently as a team while saving administrators unnecessary work.
+
+**Using Custom Groups in ownCloud**
+
+In the ownCloud web interface simply click 'Settings' in the top right-hand corner and navigate to the 'Custom Groups' section in the menu. Here users can create and manage their Custom Groups with a few simple clicks. Custom Groups are visible only to members of the group and ownCloud administrators can see and modify all Custom Groups of an ownCloud.
+Additionally the application provides permission management capabilities to enable a collaborative management of Custom Groups: Members of a group can be classified either as 'Member' or 'Group admin'. Members can share with the group, view the member list and leave the group. Group admins, in addition, can add and remove members, rename or delete the group and set permissions of other members.
+
+Sharing with a Custom Group is as easy and quick as always. Just click on the sharing symbol of a file or folder, go to the 'Users and Groups' tab in the Sharing menu and select the relevant Custom Group from the dropdown menu. Also, all ownCloud clients (Desktop/Android/iOS) can be used to share with Custom Groups conveniently.
+
+### Resources: 
+- [ownCloud X Insights: Custom Groups](https://www.youtube.com/watch?v=jthRk6gw_hE)
+- [App of the Week Blog: Custom Groups](https://owncloud.com/app-week-custom-groups/)</description>
+	<website>https://github.com/owncloud/customgroups/</website>
+	<bugs>https://github.com/owncloud/customgroups/issues</bugs>
+	<repository type="git">http://github.com/owncloud/customgroups.git</repository>
+	<licence>AGPL</licence>
+	<author>Vincent Petry</author>
+	<version>0.6.2</version>
+	<documentation>
+    		<user>https://doc.owncloud.com/server/latest/user_manual/files/webgui/custom_groups.html</user>
+		<admin>https://doc.owncloud.com/server/latest/admin_manual/configuration/user/user_configuration.html?highlight=custom%20groups#enabling-custom-groups</admin>
+	</documentation>
+	<category>collaboration</category>
+	<screenshot>https://github.com/owncloud/screenshots/raw/a28a6cf38ed8d18d98a02fb7ecac82d1a264a791/customgroups/customgroups-screenshot.png</screenshot>
+	<types>
+		<authentication/>
+		<dav/>
+	</types>
+	<use-migrations>true</use-migrations>
+	<dependencies>
+		<owncloud min-version="10.4" max-version="10" />
+	</dependencies>
+	<sabre>
+		<plugins>
+			<plugin>OCA\CustomGroups\Dav\CustomGroupsPlugin</plugin>
+			<plugin>OCA\CustomGroups\Dav\CSVExportPlugin</plugin>
+			<plugin>OCA\CustomGroups\Dav\CSVImportPlugin</plugin>
+		</plugins>
+		<collections>
+			<collection>OCA\CustomGroups\Dav\RootCollection</collection>
+		</collections>
+	</sabre>
+	<settings>
+		<admin>OCA\CustomGroups\AdminPanel</admin>
+		<personal>OCA\CustomGroups\SettingsPanel</personal>
+	</settings>
+	<settings-sections>
+		<personal>OCA\CustomGroups\SettingsSection</personal>
+	</settings-sections>
+</info>

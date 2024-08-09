@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<info>
+	<id>files_classifier</id>
+	<name>Document Classification</name>
+	<namespace>FilesClassifier</namespace>
+  	<summary>Classify Documents and Enforce Policies</summary>
+	<description>
+Dealing with sensitive information naturally introduces the risk of data breaches which can directly translate to legal cost, loss of know-how or reputational damage, for instance. That's why it is essential to ensure that sensitive data is handled securely.  
+
+To manage risks originating from collaboration on sensitive information, enterprises typically design information security guidelines. Depending on the industry, compliance with certain guidelines is required to securely exchange information along the value chain. Additionally, regulatory requirements like the GDPR demand a special treatment for documents with specific content (e.g., Personally Identifiable Information).  
+
+This extensions equips ownCloud with the capabilities to **import classification information from document metadata** and introduces **feature policies** that take information security guidelines into practice.  
+
+**Document Classification enables ownCloud providers to**
+
+- Comply with information security standards like ISO 27001/2
+- Handle data in compliance with GDPR
+- Manage risks effectively and cover potential data breaches
+- Display the data classification levels to raise user awareness
+- Prevent human mistakes when dealing with sensitive information
+- Fulfil corporate data protection requirements
+
+# Automated Classification based on Document Metadata
+
+To embed security levels into documents, users classify them within their Office solution. The classification information stored within the document metadata is evaluated when documents are uploaded to ownCloud. Classification levels are represented via [Tags](https://doc.owncloud.com/server/latest/user_manual/files/webgui/tagging.html) in ownCloud.
+
+**Office Suite Features for Document Classification**
+- Currently the extension supports Microsoft Office formats (docx, dotx, xlsx, xltx, pptx, ppsx and potx).
+- **Microsoft Office**: It is recommended to use the [Microsoft Azure Information Protection](https://azure.microsoft.com/en-us/services/information-protection/) or the [NovaPath](https://www.m-und-h.de/en-novapath/) add-on as a classification manager
+- **LibreOffice**: Provides an [integrated classification manager (TSCP)](https://help.libreoffice.org/Writer/Document_Classification/tr) out-of-the-box
+
+# Feature Policies
+
+Based on the classification this extension enables ownCloud providers to handle documents securely by imposing feature policies:
+
+- Documents of certain security levels may not be uploaded (**Prevent upload**)
+- Documents of certain security levels may not be shared publicly (**Prevent link sharing**)
+- Public links on documents with certain security levels have a separate expiration policy (**Unprotected links expire after X days**)
+
+## Further Capabilities for Classification and Policy Enforcement
+
+Apart from this extension ownCloud offers more ways to classify documents and to enforce policies. As all of them rely on [Tags](https://doc.owncloud.com/server/latest/user_manual/files/webgui/tagging.html) they can easily be combined with the capabilities provided by this extension.
+
+- Manual Classification via [Collaborative Tags](https://doc.owncloud.com/server/latest/user_manual/files/webgui/tagging.html)
+- Automated Classification based on File or User Properties with the [Workflows](https://marketplace.owncloud.com/apps/workflow) extension
+- Access Policies with the [File Firewall](https://marketplace.owncloud.com/apps/firewall) extension
+
+For more information about Document Classification and Policy Enforcement with ownCloud, examples and configuration instructions, see the [ownCloud Documentation](https://doc.owncloud.com/server/latest/admin_manual/enterprise/classification_and_policy_enforcement.html).
+
+## Resources
+
+- [Document Classification and Policy Enforcement with ownCloud](https://www.youtube.com/watch?v=ke2QuznI_9g) - Talk at ownCloud Conference 2018</description>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<version>1.3.1</version>
+	<category>security</category>
+  	<documentation>
+    		<admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/classification_and_policy_enforcement.html</admin>
+  	</documentation>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/files_classifier/ownCloud-app-file-classifier.jpg</screenshot>
+	<types>
+		<filesystem/>
+	</types>
+
+	<dependencies>
+		<php min-version="7.1" max-version="7.4"/>
+		<owncloud min-version="10.5" max-version="10"/>
+		<lib>zip</lib>
+		<lib>xml</lib>
+	</dependencies>
+
+	<settings>
+		<admin>OCA\FilesClassifier\AdminPanel</admin>
+	</settings>
+</info>

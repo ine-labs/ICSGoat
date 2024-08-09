@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<info>
+  <id>admin_audit</id>
+  <name>Auditing</name>
+  <licence>OCL</licence>
+  <author>ownCloud GmbH</author>
+  <dependencies>
+    <owncloud min-version="10.5" max-version="10"/>
+  </dependencies>
+  <summary>Keep track of user and admin actions</summary>
+  <description>
+When operating web services in enterprise scenarios it is essential to stay in full control. While ownCloud is designed to maintain full control over files for users it is crucial to also stay in control of the actions within the platform. To be able to prove compliance with corporate guidelines as well as to enable reporting and auditing of operations, the Auditing extension takes note of actions conducted by users and administrators.
+The log entries are written in JSON format and are optimized to be consumed by professional log analyzers (like Splunk or ELK stack) to collect statistics, to derive visualizations and to set alerts for certain events of interest.
+
+Specifically, the application logs
+- login and logout events of users
+- file system operations (create/delete/move; including actions on the trash bin and versioning)
+- sharing operations (user/group sharing, sharing via link, changing permissions, calls to sharing API from clients)
+- Custom Groups events
+- file tagging operations (add/remove tags)
+- file commenting operations (create/update/delete)
+- user management operations (creation/deletion/activation/deactivation of users, group management)
+- user settings changes
+- impersonation events
+- enabling/disabling of ownCloud Apps
+- executions of OCC commands (CLI)
+
+The logs are written to the owncloud.log file by default. If you require a separate log file, e.g. for legal or compliance reasons, you will find an example of how to split those in config.sample.php.
+  </description>
+  <version>2.1.3</version>
+  <documentation>
+	<admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/logging/enterprise_logging_apps.html</admin>
+  </documentation>
+  <category>tools</category>
+  <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/admin_audit/owncloud-app-admin-audit.jpg</screenshot>
+  <types>
+    <logging/>
+  </types>
+</info>

@@ -1,0 +1,26 @@
+{ "translations": {
+    "Restore" : "استعادة",
+    "Archived Files" : "الملفات المحفوظة",
+    "No archived files" : "لا توجد ملفات محفوظة",
+    "Files and folders will appear here when they enter your archive" : "ستظهر الملفات والمجلدات هنا عندما تدخل إلى سجل محفوظاتك",
+    "There was an error in the background whilst the files were beind restored. Please contact your system administrator if this message persists." : "حدث خطأ في الخلفية أثناء استعادة الملفات. يُرجى الاتصال بالمسؤول عن نظامك إذا استمرت هذه الرسالة في الظهور.",
+    "Error restoring files!" : "حدث خطأ أثناء استعادة الملفات!",
+    "Scheduled for archive today!" : "مجدول للحفظ اليوم!",
+    "Scheduled for archive {diff}" : "مجدول للحفظ {diff}",
+    "Not scheduled for archive" : "غير مجدول للحفظ",
+    "<strong>Lifecycle Events</strong> for files <em>(always listed in stream)</em>" : "<strong>أحداث دورة الحياة</strong> للملفات <em>(دائمًا ما تدرج في جدول)</em>",
+    "%1$s was moved to the archive" : "تم نقل %1$s إلى سجل المحفوظات",
+    "%1$s was restored" : "تمت استعادة %1$s",
+    "%1$s was expired" : "انتهت صلاحية %1$s",
+    "The file %1$s was moved to the archive" : "تم نقل الملف %1$s إلى سجل المحفوظات",
+    "The file %1$s was restored from the archive" : "تمت استعادة الملف %1$s من سجل المحفوظات",
+    "The file %1$s was expired from the archive" : "انتهت صلاحية الملف %1$s من سجل المحفوظات",
+    "File Lifecycle Events" : "أحداث دورة حياة الملف",
+    "Successfully restored \"%s\"." : "تمت استعادة \"%s\" بنجاح.",
+    "No entries found in this folder" : "لم يتم العثور على أي مدخلات في هذا المجلد",
+    "Name" : "الاسم",
+    "Archived" : "تم الحفظ",
+    "Expires" : "انتهت الصلاحية",
+    "Last Modified" : "آخر تعديل"
+},"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
+}

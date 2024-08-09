@@ -1,0 +1,32 @@
+{
+	"name": "dg/composer-cleaner",
+	"type": "composer-plugin",
+	"description": "Victor The Cleaner: removes unnecessary files from vendor directory.",
+	"keywords": ["composer"],
+	"license": ["BSD-3-Clause"],
+	"authors": [
+		{
+			"name": "David Grudl",
+			"homepage": "https://davidgrudl.com"
+		}
+	],
+	"require": {
+		"php": ">=7.1",
+		"composer-plugin-api": "^1.0 || ^2.0"
+	},
+	"require-dev": {
+		"composer/composer": "^1.10 || ^2.0",
+		"nette/tester": "^2.2",
+		"phpstan/phpstan": "^0.12"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"scripts": {
+		"phpstan": "phpstan analyse",
+		"tester": "tester tests -s"
+	},
+	"extra": {
+		"class": "DG\\ComposerCleaner\\Plugin"
+	}
+}

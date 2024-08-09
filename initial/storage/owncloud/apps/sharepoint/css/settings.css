@@ -1,0 +1,47 @@
+/**
+ * ownCloud
+ *
+ * @author Jesus Macias Portela <jesus@owncloud.com>
+ * @author Juan Pablo Villafañez Ramos <jvillafanez@owncloud.com>
+ * @copyright (C) 2014 ownCloud, Inc.
+ *
+ * This code is covered by the ownCloud Commercial License.
+ *
+ * You should have received a copy of the ownCloud Commercial License
+ * along with this program. If not, see <https://owncloud.com/licenses/owncloud-commercial/>.
+ *
+ */
+
+div.containing_grid {
+    padding : 1em 0;
+}
+
+div.containing_grid > h3 {
+    padding : 1em 0;
+}
+
+.sp_top{
+    vertical-align: middle;
+}
+
+#SPPersonalMountPoints table.grid td > *,
+#SPadminPersonalMountPoints table.grid td > *,
+#SPadminMountPoints table.grid td > * {
+    vertical-align : middle;
+}
+
+.SP-Select2-Dropdown .select2-results .select2-result-label {
+height: 32px;
+padding: 3px;
+}
+.SP-Select2-Dropdown .select2-results .select2-result-label .avatardiv {
+display:inline-block;
+}
+.SP-Select2-Dropdown .select2-results .select2-result-label .avatardiv + span {
+margin-left: 10px;
+}
+.SP-Select2-Dropdown .select2-results .select2-result-label .avatardiv[data-type="group"] + span {
+vertical-align: top;
+top: 6px;
+position: relative;
+}

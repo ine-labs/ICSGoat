@@ -1,0 +1,28 @@
+/**
+ * ownCloud
+ *
+ * @author Arthur Schiwon <blizzz@owncloud.com>
+ * @copyright (C) 2014 ownCloud, Inc.
+ *
+ * This code is covered by the ownCloud Commercial License.
+ *
+ * You should have received a copy of the ownCloud Commercial License
+ * along with this program. If not, see <https://owncloud.com/licenses/owncloud-commercial/>.
+ *
+ */
+#filesLdapHome div p label {
+	width: 30%;
+	max-width: 300px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 9px;
+}
+
+#filesLdapHome div p input:not([type='radio']) {
+	width: 60%;
+	display: inline-block;
+}
+
+.filesLdapHomeIndent {
+	text-indent: 3%;
+}

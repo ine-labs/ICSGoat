@@ -1,0 +1,200 @@
+.toolbarButton#secondaryToolbarClose::before {
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomIn.svg);
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomIn.svg);
+  transform: rotate(45deg);
+}
+
+/* overwrite icons because of Safari bug where icons won't load */
+#findInput[data-status="pending"],
+.toolbarField.pageNumber.visiblePageIsLoading {
+  background-image: url(../js/vendor/pdfjs/web/images/loading.svg);
+}
+
+.dropdownToolbarButton::after {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-menuArrow.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-menuArrow.svg);
+}
+
+.toolbarButton#sidebarToggle::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-sidebarToggle.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-sidebarToggle.svg);
+}
+
+.toolbarButton#secondaryToolbarToggle::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-secondaryToolbarToggle.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-secondaryToolbarToggle.svg);
+}
+
+.toolbarButton.findPrevious::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/findbarButton-previous.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/findbarButton-previous.svg);
+}
+
+.toolbarButton.findNext::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/findbarButton-next.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/findbarButton-next.svg);
+}
+
+.toolbarButton.pageUp::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-pageUp.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-pageUp.svg);
+}
+
+.toolbarButton.pageDown::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-pageDown.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-pageDown.svg);
+}
+
+.toolbarButton.zoomOut::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomOut.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomOut.svg);
+}
+
+.toolbarButton.zoomIn::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomIn.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-zoomIn.svg);
+}
+
+.toolbarButton.presentationMode::before,
+.secondaryToolbarButton.presentationMode::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-presentationMode.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-presentationMode.svg);
+}
+
+.toolbarButton.print::before,
+.secondaryToolbarButton.print::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-print.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-print.svg);
+}
+
+.toolbarButton.openFile::before,
+.secondaryToolbarButton.openFile::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-openFile.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-openFile.svg);
+}
+
+.toolbarButton.download::before,
+.secondaryToolbarButton.download::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-download.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-download.svg);
+}
+
+
+.toolbarButton.bookmark::before,
+.secondaryToolbarButton.bookmark::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-bookmark.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-bookmark.svg);
+}
+
+#viewThumbnail.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewThumbnail.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewThumbnail.svg);
+}
+
+#viewOutline.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewOutline.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewOutline.svg);
+}
+
+#viewAttachments.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewAttachments.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewAttachments.svg);
+}
+
+#viewLayers.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewLayers.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-viewLayers.svg);
+}
+
+#currentOutlineItem.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-currentOutlineItem.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-currentOutlineItem.svg);
+}
+
+#viewFind.toolbarButton::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-search.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/toolbarButton-search.svg);
+}
+
+.treeItemToggler::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/treeitem-expanded.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/treeitem-expanded.svg);
+}
+
+.treeItemToggler.treeItemsHidden::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/treeitem-collapsed.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/treeitem-collapsed.svg);
+}
+
+.secondaryToolbarButton.firstPage::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-firstPage.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-firstPage.svg);
+}
+
+.secondaryToolbarButton.lastPage::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-lastPage.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-lastPage.svg);
+}
+
+.secondaryToolbarButton.rotateCcw::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCcw.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCcw.svg);
+}
+
+.secondaryToolbarButton.rotateCw::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCw.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCw.svg);
+}
+
+.secondaryToolbarButton.selectTool::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-selectTool.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-selectTool.svg);
+}
+
+.secondaryToolbarButton.handTool::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-handTool.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-handTool.svg);
+}
+
+.secondaryToolbarButton.scrollVertical::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollVertical.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollVertical.svg);
+}
+
+.secondaryToolbarButton.scrollHorizontal::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollHorizontal.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollHorizontal.svg);
+}
+
+.secondaryToolbarButton.scrollWrapped::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollWrapped.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-scrollWrapped.svg);
+}
+
+.secondaryToolbarButton.spreadNone::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadNone.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadNone.svg);
+}
+
+.secondaryToolbarButton.spreadOdd::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadOdd.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadOdd.svg);
+}
+
+.secondaryToolbarButton.spreadEven::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadEven.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-spreadEven.svg);
+}
+
+.secondaryToolbarButton.documentProperties::before {
+  -webkit-mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-documentProperties.svg);
+  mask-image: url(../js/vendor/pdfjs/web/images/secondaryToolbarButton-documentProperties.svg);
+}
+
+html .doorHangerRight:after {
+  right: 53px!important;
+}
+html .doorHangerRight:before {
+  right: 53px!important;
+}
+

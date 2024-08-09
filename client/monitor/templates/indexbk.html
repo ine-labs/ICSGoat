@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Data</title>
+    <script>
+        function fetchData() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('data-table-body');
+                    tableBody.innerHTML = '';  // Clear the table
+
+                    data.forEach(row => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${row.id}</td>
+                            <td>${row.variable_name}</td>
+                            <td>${row.identifier}</td>
+                            <td>${row.process_name}</td>
+                            <td>${row.protocol}</td>
+                            <td>${row.value}</td>
+                        `;
+                        tableBody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Fetch data every 5 seconds
+        setInterval(fetchData, 5000);
+
+        // Initial fetch
+        window.onload = fetchData;
+    </script>
+</head>
+<body>
+    <h1>Monitor Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Variable Name</th>
+                <th>Identifier</th>
+                <th>Process Name</th>
+                <th>Protocol</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+</body>
+</html>

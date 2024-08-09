@@ -1,0 +1,25 @@
+OC.L10N.register(
+    "password_policy",
+    {
+    "Saved" : "Enregistré",
+    "Failed to save!" : "échec de la sauvegarde!",
+    "Expiration date is required" : "Une date d'expiration est requise",
+    "_Expiration date cannot exceed %n day_::_Expiration date cannot exceed %n days_" : ["La date d'expiration ne peut pas %n journée","La date d'expiration ne peut pas excéder %n jours"],
+    "Password is too short. Minimum %d characters are required." : "Le mot de passe est trop court. %dcaractères minimum sont obligatoire.",
+    "Password contains too few numbers. Minimum %d numbers are required." : "Le mot de passe contient très peu de chiffres. %dchiffres minimum sont obligatoire.",
+    "Password contains invalid special characters. Only %s are allowed." : "Le mot de passe contient des caractères non valable. Seulement %ssont autorisés.",
+    "Password contains too few special characters. Minimum %d special characters are required." : "Le mot de passe contient très peu de caractères spéciaux.%dcaractères spéciaux sont obligatoire.",
+    "Password contains too few uppercase characters. Minimum %d uppercase characters are required." : "Le mot de passe contient très peu de caractères majuscules. %dcaractères majuscules sont obligatoire.",
+    "Password and public link expiration policies" : "Stratégies d'expiration du mot de passe et lien public",
+    "Minimum password requirements for user accounts and public links:" : "Exigences minimales pour le mot de passe des comptes utilisateur et des liens publics:",
+    "minimum characters" : "caractères minimum",
+    "uppercase letters" : "lettres majuscule",
+    "numbers" : "chiffres",
+    "special characters" : "caractères spéciaux",
+    "Define special characters:" : "Définition des caractères spéciaux:",
+    "Public link expiration policy:" : "Stratégie d'expiration du lien public",
+    "days until link expires if password is set" : "jours jusqu'à l'expiration du lien si un mot de passe est défini",
+    "days until link expires if password is not set" : "jours jusqu'à l'expiration du lien si un mot de passe n'est pas défini",
+    "Save" : "Enregistrer"
+},
+"nplurals=2; plural=(n > 1);");

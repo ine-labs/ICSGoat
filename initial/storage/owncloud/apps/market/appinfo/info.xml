@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<info>
+	<id>market</id>
+	<name>Market</name>
+	<summary>Integrate the ownCloud marketplace into your ownCloud</summary>
+	<description>Easily manage ownCloud apps from within your ownCloud web interface. It connects your ownCloud with your marketplace account and lets you browse, install and update any apps from inside your ownCloud instance.
+
+Please note: Since ownCloud X (10.0) every instance gets shipped with this app included. You do not need to install it separately.
+To use this application click on "Files" in the top left corner and click on "Market" (cart icon) (Administrator privileges required) </description>
+	<licence>AGPL</licence>
+	<author>Thomas Müller, Felix Heidecke, Thomas Börger, Philipp Schaffrath, Viktar Dubiniuk</author>
+	<version>0.6.3</version>
+	<default_enable/>
+	<category>tools</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/market/ownCloud-market-app.jpg</screenshot>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<background-jobs>
+		<job>OCA\Market\CheckUpdateBackgroundJob</job>
+	</background-jobs>
+	<commands>
+		<command>OCA\Market\Command\InstallApp</command>
+		<command>OCA\Market\Command\UnInstallApp</command>
+		<command>OCA\Market\Command\ListApps</command>
+		<command>OCA\Market\Command\UpgradeApp</command>
+	</commands>
+	<navigation role="admin">
+		<route>market.page.index</route>
+		<order>100</order>
+	</navigation>
+</info>

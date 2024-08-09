@@ -1,0 +1,37 @@
+<info>
+    <id>windows_network_drive</id>
+    <name>External Storage: Windows Network Drives</name>
+    <summary>Integrate Windows and Samba/CIFS network drives as external storages</summary>
+    <description>
+This application allows to integrate Windows network drives, Samba or CIFS shares as external storages. It enables administrators to configure ownCloud to access existing Windows and Samba shared network drives. By assigning one or more network drives to groups and / or users, admins can preserve Windows network drive ACLs and still provide sharing, desktop syncing and mobile access to files stored on these network drives. This application is different from the Windows Home Directory (LDAP Home Connector) in that Windows Network Drive does not require any LDAP/AD attribute, can integrate multiple Windows network drives, and accesses these with user credentials.
+Once a drive has been integrated by an administrator, users see a folder structure that mirrors their network drive(s). Users can then selectively sync these files to the desktop, or access them on mobile devices like any other ownCloud file, leaving the files on the network drive – as the system of record. 
+
+Additional ownCloud configuration is required. More information is available in the ownCloud documentation.
+    </description>
+    <licence>OCL</licence>
+    <author>ownCloud GmbH</author>
+    <category>storage</category>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/windows_network_drive/owncloud-app-windows-network-drive.jpg</screenshot>
+    <types>
+        <filesystem/>
+    </types>
+    <use-migrations>true</use-migrations>
+    <documentation>
+        <admin>https://doc.owncloud.com/server/admin_manual/enterprise/external_storage/windows-network-drive_configuration.html</admin>
+    </documentation>
+    <rememberlogin>false</rememberlogin>
+    <dependencies>
+        <owncloud min-version="10.7" max-version="10" />
+        <lib min-version="0.8.0">libsmbclient</lib>
+    </dependencies>
+    <commands>
+        <command>OCA\windows_network_drive\Command\Listen</command>
+        <command>OCA\windows_network_drive\Command\ProcessQueue</command>
+        <command>OCA\windows_network_drive\Command\SetServiceAccount</command>
+    </commands>
+    <version>2.1.1</version>
+    <settings>
+        <admin>OCA\Windows_network_drive\Panels\Admin</admin>
+        <personal>OCA\Windows_network_drive\Panels\Personal</personal>
+    </settings>
+</info>

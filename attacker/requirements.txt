@@ -1,0 +1,4 @@
+pymodbus==3.6.6
+requests
+paho-mqtt
+asyncua==0.8.4

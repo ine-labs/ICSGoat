@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<info>
+    <id>theme-enterprise</id>
+    <name>ownCloud X Enterprise Theme</name>
+    <summary>Equip your ownCloud instance with the official ownCloud X Enterprise Theme</summary>
+    <description>ownCloud X marks a new generation of ownCloud focussing on security, performance and productivity. Reflect the latest version within your ownCloud instance and get the ownCloud X Enterprise Theme. With some updates within our UI we offer an even more intuitive user experience for all ownCloud Enterprise users.</description>
+    <licence>OCL</licence>
+    <author>ownCloud GmbH / Philipp Schaffrath, Felix Heidecke</author>
+    <version>2.3.0</version>
+    <category>customization</category>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/theme-enterprise/ocx-theme_login.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/theme-enterprise/ocx-theme_files-app.png</screenshot>
+    <types>
+        <theme/>
+    </types>
+    <dependencies>
+        <owncloud min-version="10.5" max-version="10" />
+    </dependencies>
+    <namespace>Theme</namespace>
+</info>

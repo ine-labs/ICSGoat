@@ -1,0 +1,288 @@
+/**
+ * ownCloud
+ *
+ * @author Jan-Christoph Borchardt <jan@owncloud.com>
+ * @copyright (C) 2014 ownCloud, Inc.
+ *
+ * This code is covered by the ownCloud Commercial License.
+ *
+ * You should have received a copy of the ownCloud Commercial License
+ * along with this program. If not, see <https://owncloud.com/licenses/owncloud-commercial/>.
+ *
+ */
+
+/* ownCloud colors
+
+dark blue #041e42
+gray blue #4e6c78
+light blue #cadce5
+
+gradient from #bad2dd to #a2bdca
+
+orange #e67036
+turquoise #577a8f
+gray #4b4b4d
+light gray #f6f7f7
+
+*/
+
+/* nice blue gradient and cloud image for header */
+
+#body-login {
+    text-align: center;
+    background-image: url("../img/background.svg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #041e42;
+}
+
+#body-user #header,
+#body-settings #header,
+#header {
+    background: #041e42;
+}
+
+/* use logos from theme */
+#body-login #header .logo {
+    background-image: url("../img/logo.svg");
+    background-position: center center;
+    background-size: 220px auto;
+    width: 250px;
+    height: 121px;
+}
+
+#header #owncloud .logo-icon {
+    background-image: url(../img/logo-icon.svg);
+}
+
+/* shift logo up a bit to account for the logo claim */
+#body-login #header {
+    position: relative;
+    top: -10px;
+}
+
+#body-login #header #logo-claim {
+	display: block !important; /* override hide in template */
+	position:relative;
+	left: 0;
+	top: 5px;
+	width: auto;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+  background-color: rgba(78,133,200,0.2);
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+  padding-top: 5px!important;
+  padding-right: 12px!important;
+  padding-bottom: 5px!important;
+  padding-left: 12px!important;
+  margin-bottom: 10px!important;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* override previous #header rules to not mess up log in page where the header is empty */
+#body-login #header {
+    background: none !important;
+}
+
+/* adjust label color to bright background */
+#body-login p.info,
+#body-login form fieldset legend,
+#body-login #datadirContent label,
+#body-login form fieldset .warning-info,
+#body-login form input[type="checkbox"] + label,
+#body-login #remember_login:hover + label,
+#body-login #remember_login:focus + label {
+    color: #fff !important;
+}
+
+/* hover effect for app switcher label */
+
+#header #owncloud,
+#header .header-appname-container {
+    opacity: 1;
+}
+
+#header .header-appname-container {
+    margin: 0;
+    padding: 0;
+}
+
+.header-appname {
+    color: #799eb4;
+}
+
+#header .caret {
+    border-color: #799eb4;
+}
+
+#header .caret:before {
+    background-color: #799eb4;
+}
+
+/* adjust checkbox color to bright background */
+html:not(.ie8) input[type="checkbox"].checkbox--white + label:before {
+    background-image: url("../img/actions/checkbox.svg");
+}
+
+html:not(.ie8) input[type="checkbox"].checkbox--white:checked + label:before {
+    background-image: url("../img/actions/checkbox-checked.svg");
+}
+
+/* adjust footer color to bright background */
+#body-login p.info a, #body-login #showAdvanced,
+#body-login p.info a:hover, #body-login p.info a:focus {
+    color: #fff;
+}
+
+/* highlighting the search result in different color */
+#filestable tbody tr.searchresult {
+    background-color: #e8e8e8;
+}
+
+/* user name light grey, fitting the style, like language chooser on website */
+#settings {
+    position: relative;
+}
+
+#expand {
+    color: rgb(220, 220, 220);
+}
+
+#expand:hover, #expand:focus, #expand:active {
+    color: rgb(232, 115, 59);
+    color: rgb(240, 240, 240);
+}
+
+#expandDisplayName {
+    cursor: pointer;
+}
+
+.ie8 #expanddiv,
+#expanddiv {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    -webkit-box-shadow: 0px 0px 20px rgba(29, 45, 68, 0.4);
+    -moz-box-shadow: 0px 0px 20px rgba(29, 45, 68, 0.4);
+    box-shadow: 0px 0px 20px rgba(29, 45, 68, 0.4);
+}
+
+#expanddiv:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+#expanddiv li {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    white-space: nowrap;
+
+    /* prevent icons and text wrapping for short usernames */
+}
+
+#expanddiv li:hover,
+#expanddiv li:focus {
+    background-color: rgb(243, 243, 243);
+}
+
+#expanddiv li a {
+    padding: 4px 12px;
+    color: rgb(89, 126, 145);
+    text-shadow: none;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity = 100);
+    opacity: 1;
+}
+
+#expanddiv a img,.icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
+    filter: alpha(opacity = 45);
+    opacity: .45;
+}
+
+#expanddiv li:hover img,
+#expanddiv li:hover .icon,
+#expanddiv li:focus img,
+#expanddiv li:focus .icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity = 60);
+    opacity: .6;
+}
+
+/* orange primary button */
+.primary,
+input[type="submit"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary,
+.primary:active,
+input[type="submit"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active {
+    background-color: #e67036;
+    color: #fff;
+    border: #c65016;
+}
+
+.primary:hover,
+input[type="submit"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+.primary:focus,
+input[type="submit"].primary:focus,
+input[type="button"].primary:focus,
+button.primary:focus,
+.button.primary:focus {
+    background-color: #d66026;
+    color: #eee;
+    border: #c65016;
+}
+
+/* Give ownCloud the Enterprise look */
+
+.logo-icon {
+    text-indent: -9999px;
+    order: 1;
+}
+
+/* info text on public view gets 10px more space for mobil view */
+#content {
+    min-height: calc(100vh - 130px);
+}
+
+/* fix the padding of the info text in public view */
+#body-public footer .info {
+    padding: 0px 0;
+}
+
+/* mobile modifications */
+
+@media only screen and (max-height: 1023px) {
+    #body-login p.info {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #body-login p.info {
+        padding-top: 30px;
+    }
+    #body-login .v-align {
+        margin-top: 30px;
+    }
+    #body-login footer {
+        position: relative;
+        z-index: -1;
+    }
+}

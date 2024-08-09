@@ -1,0 +1,10 @@
+{ "translations": {
+    "FTP (Fly)" : "FTP (Fly)",
+    "Username" : "Gebruikersnaam",
+    "Password" : "Wagwoord",
+    "Host" : "Gasheer",
+    "Root" : "Wortel",
+    "Port" : "Poort",
+    "Secure ftps://" : "Beveiligde ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,25 @@
+OC.L10N.register(
+    "password_policy",
+    {
+    "Saved" : "Zapisano",
+    "Failed to save!" : "Nie można zapisać!",
+    "Expiration date is required" : "Wymagana data wygaśnięcia",
+    "_Expiration date cannot exceed %n day_::_Expiration date cannot exceed %n days_" : ["Data wygaśnięcia nie może przekroczyć %ndnia","Data wygaśnięcia nie może przekroczyć %ndni","Data wygaśnięcia nie może przekroczyć %ndni","Data wygaśnięcia nie może przekroczyć %ndni"],
+    "Password is too short. Minimum %d characters are required." : "Hasło jest za krótkie. Wymagane minimum %dznaków.",
+    "Password contains too few numbers. Minimum %d numbers are required." : "Hasło zawiera zbyt mało cyfr. Wymagane jest co najmniej %d cyfr.",
+    "Password contains invalid special characters. Only %s are allowed." : "Hasło zawiera niedozwolone znaki specjalne. Tylko znaki są dozwolone:%s",
+    "Password contains too few special characters. Minimum %d special characters are required." : "Hasło zawiera zbyt mało znaków specjalnych. Wprowadź co najmniej %dznaki specjalne.",
+    "Password contains too few uppercase characters. Minimum %d uppercase characters are required." : "Hasło zawiera zbyt mało dużych liter. Wymagane co najmniej %dwielkie litery.",
+    "Password and public link expiration policies" : "Polityka wygaśnięcia haseł i linków publicznych",
+    "Minimum password requirements for user accounts and public links:" : "Minimalne wymagania hasła dla kont użytkowników i linków publicznych",
+    "minimum characters" : "minimalna ilość znaków",
+    "uppercase letters" : "duże litery",
+    "numbers" : "cyfry",
+    "special characters" : "znaki specjalne",
+    "Define special characters:" : "Zdefiniuj znaki specjalne:",
+    "Public link expiration policy:" : "Polityka wygaszania ważności linków publicznych",
+    "days until link expires if password is set" : "Ilość dni do wygaśnięcia linka jeżeli hasło jest ustawione",
+    "days until link expires if password is not set" : "Ilość dni do wygaśnięcia linka jeżeli hasło nie jest ustawione",
+    "Save" : "Zapisz"
+},
+"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

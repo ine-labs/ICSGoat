@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICS Process HMI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <object
+        class="svg-container"
+        id="mySvg"
+        data="{{ url_for('static', filename='images/icsgoat-hmi1.svg') }}"
+        type="image/svg+xml"
+    ></object>
+
+    <div id="level-sensor-raw_material_handling" class="overlay-text"></div>
+    <div id="flow-meter-raw_material_handling" class="overlay-text"></div>
+    <div id="valve-pump-raw_material_handling" class="overlay-text"></div>
+    <div id="holding_register_0-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_1-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_2-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_3-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_4-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_5-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_6-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_7-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_8-filling_and_packaging" class="overlay-text" ></div>
+    <div id="holding_register_9-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_0-filling_and_packaging" class="overlay-text" ></div>
+    <!-- <div id="coil_1-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_2-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_3-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_4-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_5-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_6-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_7-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_8-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_9-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_10-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_11-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_12-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_13-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_14-filling_and_packaging" class="overlay-text" ></div>
+    <div id="coil_15-filling_and_packaging" class="overlay-text" ></div> -->
+    <div id="input_register_level_0-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_1-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_2-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_3-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_4-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_5-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_6-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_7-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_8-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_level_9-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_0-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_1-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_2-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_3-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_4-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_5-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_6-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_7-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_8-filling_and_packaging" class="overlay-text" ></div>
+    <div id="input_register_pressure_9-filling_and_packaging" class="overlay-text" ></div>
+    <div id="binary_1-filtration_and_purification" class="overlay-text" ></div>
+    <div id="binary_2-filtration_and_purification" class="overlay-text" ></div>
+    <div id="analog_1-filtration_and_purification" class="overlay-text" ></div>
+    <div id="analog_2-filtration_and_purification" class="overlay-text" ></div>
+    <div id="analog_3-filtration_and_purification" class="overlay-text" ></div>
+    <div id="analog_4-filtration_and_purification" class="overlay-text" ></div>
+    <div id="BioreactorTemperature-fermentation" class="overlay-text" ></div>
+    <div id="BioreactorPH-fermentation" class="overlay-text" ></div>
+    <div id="BioreactorDissolvedOxygen-fermentation" class="overlay-text" ></div>
+    <div id="BioreactorAgitationSpeed-fermentation" class="overlay-text" ></div>
+    <div id="BioreactorLevel-fermentation" class="overlay-text" ></div>
+    <div id="NutrientSupplyValve-fermentation" class="overlay-text" ></div>
+    <div id="WasteRemovalValve-fermentation" class="overlay-text" ></div>
+    <div id="MixerSpeed-mixing_and_blending" class="overlay-text" ></div>
+    <div id="TemperatureSetpoint-mixing_and_blending" class="overlay-text" ></div>
+    <div id="MixerStatus-mixing_and_blending" class="overlay-text" ></div>
+    <div id="Temperature-mixing_and_blending" class="overlay-text" ></div>
+    <div id="FlowRate-mixing_and_blending" class="overlay-text" ></div>
+    <div id="Pressure-mixing_and_blending" class="overlay-text" ></div>
+    <div id="IngredientQuantity-mixing_and_blending" class="overlay-text" ></div>
+    <div id="MixerSpeed-formulation" class="overlay-text" ></div>
+    <div id="MixerStatus-formulation" class="overlay-text" ></div>
+    <div id="Temperature-formulation" class="overlay-text" ></div>
+    <div id="Humidity-formulation" class="overlay-text" ></div>
+    <div id="ProductLevel-formulation" class="overlay-text" ></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

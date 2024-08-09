@@ -1,0 +1,10 @@
+{ "translations": {
+    "FTP (Fly)" : "FTP (Fly)",
+    "Username" : "Потребителско име",
+    "Password" : "Парола",
+    "Host" : "Host",
+    "Root" : "Root",
+    "Port" : "Порт",
+    "Secure ftps://" : "Сигурен ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<info>
+	<id>workflow</id>
+	<name>Workflows</name>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<version>0.5.4</version>
+	<summary>Automated File Operations based on Collaborative Tags</summary>
+	<description>
+This application enables admins to specify rules and conditions (file size, file mimetype, group membership and more) to automatically assign tags to uploaded files.
+Based on those tags automated file operations ('Workflow actions') like File Retention (automated file retention periods) can be conducted.
+
+Basically the app consists of two features:
+
+1. Autotagging: Admin can define a list of conditions which have to be met to automatically assign a tag to a file when uploading.
+2. Retention: Admin can define a period of time for each tag. A background job deletes all files or folders which are older than the specified period and have the tag set on a parent folder or themselves.
+	</description>
+	<category>automation</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/workflow/owncloud-app-tags_workflow.jpg</screenshot>
+	<types>
+		<filesystem/>
+	</types>
+	<use-migrations>true</use-migrations>
+	<dependencies>
+		<owncloud min-version="10.9.1" max-version="10" />
+	</dependencies>
+
+	<background-jobs>
+		<job>OCA\Workflow\Retention\MetaBackgroundJob</job>
+	</background-jobs>
+
+	<repair-steps>
+		<post-migration>
+			<step>OCA\Workflow\Migration\RemoveOldBackgroundJobs</step>
+			<step>OCA\Workflow\Migration\ConvertTypesToStrings</step>
+		</post-migration>
+	</repair-steps>
+
+	<settings>
+		<admin>OCA\Workflow\AdminPanel</admin>
+	</settings>
+</info>

@@ -1,0 +1,25 @@
+{
+  "name": "node-opcua",
+  "version": "1.0.0",
+  "description": "OPCUA Server",
+  "main": "server.js",
+  "dependencies": {
+    "node-opcua": "~2.121.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "source-map-support": "^0.5.21"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "stop": "pkill --signal SIGINT opcua-server",
+    "lint": "npx eslint ."
+  },
+  "author": "INE <ine.com>",
+  "license": "MIT"
+}

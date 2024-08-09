@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<info>
+	<id>metrics</id>
+	<name>Metrics</name>
+	<namespace>Metrics</namespace>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<dependencies>
+		<php min-version="7.3" />
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<summary>System and user metrics for monitoring and reporting</summary>
+	<description>
+This extension provides a building block for monitoring and reporting of ownCloud Server. For simple use cases it ships with an integrated dashboard that summarizes information about users, storage as well as shares and allows exporting it to a CSV file. Additionally, it adds a Metrics HTTP API endpoint to ownCloud Server which can be used to obtain the Metrics data at regular intervals. With this, more sophisticated analysis and visualizations can be conducted using specialized tools like Splunk, ELK or Prometheus/Grafana.
+
+Specifically, the extension adds
+- an API endpoint which allows querying snapshot values of the system data as well as per-user data
+- an API endpoint for downloading the data in the CSV format
+- a dashboard that displays the snapshot data in the ownCloud Web UI and offers a CSV download (accessible by ownCloud administrators)
+
+The following data is available:
+
+**System data**
+- Date/Time stamp - Server time of the request
+- Storage
+  - Used storage (this also includes storage for avatars and thumbnails)
+  - Free storage
+  - Total storage (used + free)
+  - Number of files
+- Number of users
+  - registered (total number of known users)
+  - active (number of users with `lastLogin` less than two weeks ago)
+  - concurrent (number of users with at least one active session)
+- Shares
+  - Number of user shares
+  - Number of group shares
+  - Number of guest shares
+  - Number of link shares
+  - Number of federated shares
+
+**Per-user data**
+- User id
+- Display name
+- User backend
+- Last login
+- Active sessions
+- Quota
+  - Quota limit
+  - Quota usage
+- Number of files
+- Shares
+  - Number of user shares
+  - Number of group shares
+  - Number of guest shares
+  - Number of link shares
+  - Number of federated shares
+
+For more information on setup and usage, please consult the ownCloud Documentation.</description>
+	<version>1.1.0</version>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/metrics/ownCloud-app-metrics.jpg</screenshot>
+	<documentation>
+		<admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/reporting/metrics.html</admin>
+	</documentation>
+	<category>tools</category>
+	<types>
+		<prevent_group_restriction/>
+	</types>
+</info>

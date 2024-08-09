@@ -1,0 +1,9 @@
+{ "translations": {
+    "Username" : "Uzantonomo",
+    "Password" : "Pasvorto",
+    "Host" : "Gastigo",
+    "Root" : "Radiko",
+    "Port" : "Pordo",
+    "Secure ftps://" : "Sekura ftps://"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,163 @@
+version: '3'
+services:
+  raw_material_handling:
+    hostname: server1.pharmatech.local
+    build:
+      context: ./protocols/modbus/raw_material_handling
+      dockerfile: Dockerfile
+
+    networks:
+      - main_network
+
+
+  mixing_and_blending:
+    hostname: server2.pharmatech.local
+    build:
+      context: ./protocols/opcua/mixing_and_blending
+      dockerfile: Dockerfile
+
+    networks:
+      - main_network
+
+
+  fermentation:
+    hostname: server3.pharmatech.local
+    build:
+      context: ./protocols/opcua/fermentation
+      dockerfile: Dockerfile
+
+    networks:
+      - main_network
+
+
+  filtration_and_purification:
+    hostname: server4.pharmatech.local
+    build:
+      context: ./protocols/dnp3/filtration_and_purification
+      dockerfile: Dockerfile
+
+    networks:
+      - main_network
+
+
+  formulation:
+    hostname: server5.pharmatech.local
+    build:
+      context: ./protocols/opcua/formulation
+      dockerfile: Dockerfile
+
+    networks:
+      - main_network
+
+
+  filling_and_packaging:
+    hostname: server6.pharmatech.local
+    build:
+      context: ./protocols/modbus/filling_and_packaging
+      dockerfile: Dockerfile
+    networks:
+      - main_network    
+    depends_on:
+      - mqtt
+
+
+  mqtt:
+    hostname: broker.pharmatech.local
+    build:
+      context: ./protocols/mqtt/broker
+      dockerfile: Dockerfile
+    networks:
+      - main_network
+
+
+  hmi:
+    hostname: hmi.pharmatech.local
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    networks:
+      - hmi_network
+      - main_network
+    depends_on:
+      - raw_material_handling
+      - mixing_and_blending
+      - fermentation
+      - filtration_and_purification
+      - formulation
+      - filling_and_packaging
+    
+
+  scada:
+    hostname: scada.pharmatech.local
+    build:
+      context: ./scada
+      dockerfile: Dockerfile
+    networks:
+      - hmi_network
+    depends_on:
+      - raw_material_handling
+      - mixing_and_blending
+      - fermentation
+      - filtration_and_purification
+      - formulation
+      - filling_and_packaging
+    
+
+  pharmatech_site:
+    build:
+      context: ./initial/wp
+      dockerfile: Dockerfile
+    networks:
+      network_dmz:
+        ipv4_address: 172.16.2.20
+
+
+  pharmatech_cloud_storage:
+    build:
+      context: ./initial/storage
+      dockerfile: Dockerfile
+    networks:
+      network_dmz:
+        ipv4_address: 172.16.2.30
+
+
+  pharmatech_management_server:
+    build:
+      context: ./initial/mgmt_server
+      dockerfile: Dockerfile
+    networks:
+      main_network:
+        ipv4_address: 172.16.0.12
+      network_dmz:
+        ipv4_address: 172.16.2.12
+
+
+  attacker:
+    build:
+      context: ./attacker
+      dockerfile: Dockerfile
+    networks:
+      network_dmz:
+        ipv4_address: 172.16.2.8
+
+
+networks:
+  main_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
+
+
+  hmi_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.1.0/24
+
+
+  network_dmz:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.2.0/24

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<info>
+	<id>wopi</id>
+	<name>Microsoft Office Online</name>
+	<summary>Collaboratively work with Office documents in the browser</summary>
+	<description>
+With Microsoft Office Online users can work on Office documents together in the browser. The extension connects ownCloud with Microsoft Office Online Server via the WOPI protocol.
+
+Please note that a Microsoft Office Online Server is required to use the integration. Out-of-the box only the on-premises version of Microsoft Office Online Server is supported. See the documentation for more information.
+	</description>
+	<licence>OCL</licence>
+	<author>Thomas Müller</author>
+	<version>1.6.0</version>
+	<category>integration</category>
+	<documentation>
+		<admin>https://doc.owncloud.com/server/admin_manual/enterprise/collaboration/msoffice-wopi-integration.html</admin>
+	</documentation>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/wopi/ownCloud-app-app-wopi.jpg</screenshot>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+		<php min-version="7.1" max-version="7.4" />
+	</dependencies>
+	<commands>
+		<command>OCA\WOPI\Commands\GetToken</command>
+	</commands>
+	<namespace>WOPI</namespace>
+	<types>
+		<prevent_group_restriction/>
+	</types>
+</info>

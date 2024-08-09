@@ -1,0 +1,101 @@
+/**
+ *
+ * @copyright Copyright (c) 2018, ownCloud GmbH
+ * @license OCL
+ *
+ * This code is covered by the ownCloud Commercial License.
+ *
+ * You should have received a copy of the ownCloud Commercial License
+ * along with this program. If not, see <https://owncloud.com/licenses/owncloud-commercial/>.
+ *
+ */
+#files_classifier .select2-container {
+  min-width: 200px; }
+
+#files_classifier .tag-list {
+  position: relative;
+  transition: opacity .5s;
+  min-width: 1000px; }
+  #files_classifier .tag-list table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; }
+    #files_classifier .tag-list table th {
+      border: 1px solid white; }
+    #files_classifier .tag-list table tr td,
+    #files_classifier .tag-list table tr th {
+      padding: 5px 10px; }
+    #files_classifier .tag-list table thead {
+      background: #DCDCDC; }
+      #files_classifier .tag-list table thead tr:first-child th {
+        padding-top: 5px;
+        font-size: 105%;
+        font-weight: bold;
+        text-align: center; }
+      #files_classifier .tag-list table thead tr:last-child th {
+        padding-bottom: 5px; }
+    #files_classifier .tag-list table tbody tr:not(:last-child) {
+      border-bottom: 1px solid #DCDCDC; }
+    #files_classifier .tag-list table tbody input[type="text"] {
+      box-sizing: border-box;
+      width: 100%;
+      font-family: monospace;
+      text-overflow: ellipsis; }
+  #files_classifier .tag-list.is-loading {
+    opacity: .25; }
+
+#files_classifier .footer {
+  display: flex;
+  justify-content: space-between;
+  background: #F8F8F8;
+  padding: 5px 10px; }
+
+#files_classifier .button {
+  transition: background-color .25s, border-color .25s; }
+  #files_classifier .button-primary {
+    background-color: #567298;
+    border-color: #4d6688;
+    color: #fff;
+    letter-spacing: .666px; }
+
+#files_classifier button[disabled] {
+  background-color: rgba(230, 230, 230, 0.9);
+  border-color: #ddd;
+  color: #999; }
+
+#files_classifier .checkbox {
+  cursor: pointer;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../../core/img//actions/checkbox.svg"); }
+  #files_classifier .checkbox.is-checked {
+    background-image: url("../../../core/img//actions/checkbox-checked.svg"); }
+    #files_classifier .checkbox.is-checked.is-disabled {
+      background-image: url("../../../core/img//actions/checkbox-checked-disabled.svg"); }
+
+#files_classifier .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#files_classifier .padding-remove-top {
+  padding-top: 0 !important; }
+
+#files_classifier .padding-remove-right {
+  padding-right: 0 !important; }
+
+#files_classifier .padding-remove-bottom {
+  padding-bottom: 0 !important; }
+
+#files_classifier .padding-remove-left {
+  padding-left: 0 !important; }
+
+#files_classifier .text-bigger {
+  font-size: 105%; }
+
+#files_classifier .text-bold {
+  font-weight: bold; }
+
+#files_classifier .text-monospace {
+  font-family: "courier", monospace; }

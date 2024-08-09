@@ -1,0 +1,9 @@
+{ "translations": {
+    "Username" : "Erabiltzaile izena",
+    "Password" : "Pasahitza",
+    "Host" : "Ostalaria",
+    "Root" : "Erroa",
+    "Port" : "Portua",
+    "Secure ftps://" : "ftps:// segurua"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

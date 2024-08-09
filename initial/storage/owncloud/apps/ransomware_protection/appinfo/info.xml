@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<info>
+	<id>ransomware_protection</id>
+	<name>Ransomware Protection</name>
+	<summary>Protect data from ransomware threats</summary>
+	<description>
+Ransomware attacks are an ever-present malware risk, both for large enterprises as well as for individuals.
+Once affected, a whole hard drive or parts of it can become encrypted, leading to unrecoverable data loss that directly translates to effort and cost.
+
+When this happens, attackers usually ask victims to pay a ransom, often via cryptocurrencies such as Bitcoin, in exchange for the decryption key required to decrypt their data.
+While paying the ransom works in some cases, it is not recommended, as there is no guarantee that the attackers will supply the key after payment is made.
+
+### Protecting ownCloud users from ransomware attacks
+
+To mitigate ransomware threats to a minimum and to ensure ongoing access to user data, ownCloud provides _Ransomware Protection_.
+The application is tasked with *detecting*, *preventing*, and *reverting* anomalies originating from malware attacks.
+Anomalies are file operations that are not intentionally conducted by the user.
+
+**Detection and Prevention**
+
+A large part of currently known ransomware works in a way that it adds certain file extensions (like ".crypt") to affected files. This makes it possible to detect attacks and to prevent affected files from being uploaded to the ownCloud server thereby preserving original, unaffected files in ownCloud. Ransomware Protection therefore carries a list of ~1500 known ransomware file name patterns that the server refuses to accept ("blocking") when the application is enabled. In addition the application includes an optional feature to lock user accounts (read-only) for client access in order to prevent further malicious changes when ownCloud detects a ransomware attack. As soon as ransomware issues are resolved, accounts can be unlocked by administrators or by the user in self-service.
+
+**Protection**
+
+As with other malware ransomware becomes more sophisticated over time leading to attacks that can not be detected nor prevented. For that reason this application introduces smart mechanisms for file retention and roll-back on a per user basis that can provide effective protection for users. More precisely Ransomware Protection gives an administrator the means to detect the point in time when an attack has occurred (_Scanner_) and to revert all file operations conducted after this point in time (_Restorer_) via OCC commands. These mechanisms make use of ownCloud's integrated Versioning and Trash bin features and can be executed for individual user accounts while ownCloud stays in full operation.
+
+### Important notes
+
+**It is essential to be aware that user data needs to be synchronized with the ownCloud Server using the ownCloud Desktop synchronization client. Data that is not synchronized and stored in ownCloud can not be protected.**
+
+- Ransomware Protection needs to be enabled preventively.
+- Administrators need to have Versioning and Trash bin enabled and carefully decide on their configuration.
+- Administrators and users can find Ransomware Protection options in the 'Security' section of ownCloud settings.
+
+For more information regarding setup, usage and limitations, please read the [ownCloud Ransomware Protection Documentation](https://doc.owncloud.com/server/latest/admin_manual/configuration/server/security/ransomware-protection.html).
+	</description>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH, BW-Tech GmbH, Viedev GmbH</author>
+	<version>1.4.0</version>
+	<category>security</category>
+	<documentation>
+    		<admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/ransomware-protection/</admin>
+	</documentation>
+	<types>
+		<filesystem/>
+	</types>
+	<use-migrations>true</use-migrations>
+	<namespace>Ransomware_Protection</namespace>
+	<commands>
+		<command>OCA\Ransomware_Protection\Command\LockerTask</command>
+		<command>OCA\Ransomware_Protection\Command\UnlockerTask</command>
+		<command>OCA\Ransomware_Protection\Command\ScannerTask</command>
+		<command>OCA\Ransomware_Protection\Command\RestorerTask</command>
+	</commands>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/ransomware_protection/ownCloud-app-ransomware-protection.jpg</screenshot>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10"/>
+	</dependencies>
+	<settings>
+		<admin>OCA\Ransomware_Protection\Settings\AdminPanel</admin>
+		<personal>OCA\Ransomware_Protection\Settings\PersonalPanel</personal>
+	</settings>
+</info>

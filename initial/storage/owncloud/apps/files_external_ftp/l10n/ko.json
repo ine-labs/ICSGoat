@@ -1,0 +1,10 @@
+{ "translations": {
+    "FTP (Fly)" : "FTP(Fly)",
+    "Username" : "사용자 이름",
+    "Password" : "암호",
+    "Host" : "호스트",
+    "Root" : "루트",
+    "Port" : "포트",
+    "Secure ftps://" : "보안 ftps://"
+},"pluralForm" :"nplurals=1; plural=0;"
+}

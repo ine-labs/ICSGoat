@@ -1,0 +1,27 @@
+OC.L10N.register(
+    "firewall",
+    {
+    "Select a tag" : "Bitte ein Tag auswählen",
+    "At least one of the given rules is invalid." : "Mindestens eine der Regeln ist ungültig.",
+    "Firewall rules saved." : "Firewallregeln gespeichert.",
+    "An error occurred while saving the rules." : "Während des Speicherns der Regeln ist ein Fehler aufgetreten.",
+    "Firewall debug level saved." : "Firewall Debug Level gespeichert.",
+    "An error occurred while saving debug level." : "Während des Speicherns des Debug Levels ist ein Fehler aufgetreten.",
+    "Firewall" : "Firewall",
+    "Access to this resource has been forbidden by a file firewall rule." : "Der Zugriff auf diese Resource wird von einer Regel der File Firewall blockiert.",
+    "If you feel this is an error, please contact your administrator or %slogout%s." : "Falls dies ein Fehler ist kontaktieren Sie bitte Ihren Administrator oder %slogout%s.",
+    "File Firewall" : "File Firewall",
+    "Requests are checked against all groups of rules that are defined below." : "Anfragen werden gegen alle Gruppen von Regeln geprüft, die unten definiert sind.",
+    "A request is blocked when at least one group matches the request." : "Eine Anfrage wird blockiert, wenn mindestens eine Gruppe mit der Anfrage übereinstimmt.",
+    "A group matches a request when all rule conditions in the group evaluate to true." : "Eine Gruppe entspricht einer Anfrage, wenn alle Regelbedingungen in der Gruppe als wahr bewertet werden.",
+    "Save Rules" : "Regeln speichern",
+    "Logging" : "Logging",
+    "Off" : "Aus",
+    "Blocked Requests Only" : "Nur blockierte Anfragen",
+    "All Requests" : "Alle Anfragen",
+    "To log Blocked Requests Only the %s system log level %s must be set to include warnings." : "Um nur blockierte Anfragen zu protokollieren, muss die %s Protokollebene %s so eingestellt werden, dass sie auch Warnungen inkludiert.",
+    "To log All Requests the %s system log level %s must be set to include info." : "Um alle Anfragen zu protokollieren, muss die %s Protokollebene %s so eingestellt werden, dass sie auch Informationen inkludiert.",
+    "Logging All Requests can generate a large amount of log data." : "Die Protokollierung aller Anfragen kann eine große Menge an Daten erzeugen.",
+    "It is recommended to only select All Requests for short-term checking of rule settings." : "Es wird empfohlen, alle Anfragen nur für die kurzfristige Überprüfung von Regeleinstellungen auszuwählen."
+},
+"nplurals=2; plural=(n != 1);");

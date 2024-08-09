@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<info>
+	<id>files_lifecycle</id>
+	<name>File Lifecycle Management</name>
+	<summary>Manage the lifecycle of files with archive and expiration policies</summary>
+	<description>
+The File Lifecycle Management extension allows service providers to manage the lifecycle of files within ownCloud to
+
+- keep storage usage under control by limiting the time users can work with files before they are cleaned up automatically
+- comply with regulations (like GDPR or company policies) by imposing automated retention and deletion policies for files that contain e.g., personal data and may only be stored in the company for a certain period of time.
+
+To impose a workflow of Use => Archive => Delete, the extension equips ownCloud with a dedicated archive and allows administrators to define rules for automated archiving (_days passed since upload_) and subsequent deletion of files (_days passed since archiving_). The archiving and deletion processes are controlled by background jobs.
+
+Depending on the desired level of enforcement, the extension provides two policies to control the restoration of files from the archive if they are still needed:
+
+- Soft policy: Users can restore files in self-service
+- Hard policy: Only administrators or group administrators can restore files on request
+
+Users can view the lifecycle status for a file and see when the file is scheduled for archiving or deletion. All lifecycle events of a file are displayed transparently. They can be tracked for individual files as well as for a whole user account using the https://marketplace.owncloud.com/apps/activity[Activity] stream. To stay informed, users can also receive regular Activity summaries by e-mail. For auditing purposes the extension integrates with the https://marketplace.owncloud.com/apps/admin_audit[Auditing] app to provide all events of interest in the logs.
+
+For more information on setup, configuration and usage, please consult the ownCloud documentation.
+	</description>
+	<namespace>Files_Lifecycle</namespace>
+	<licence>OCL</licence>
+	<author>ownCloud GmbH</author>
+	<version>1.3.2</version>
+	<category>automation</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/screenshots/master/files_lifecycle/ownCloud-app-file-lifecycle-management.jpg</screenshot>
+	<documentation>
+		<admin>https://doc.owncloud.com/server/latest/admin_manual/enterprise/file_management/files_lifecycle.html</admin>
+		<user>https://doc.owncloud.com/server/latest/user_manual/files/files_lifecycle.html</user>
+	</documentation>
+	<dependencies>
+		<owncloud min-version="10.5" max-version="10" />
+	</dependencies>
+	<types>
+		<dav/>
+		<filesystem/>
+	</types>
+	<sabre>
+		<plugins>
+			<plugin>OCA\Files_Lifecycle\Dav\ArchivePlugin</plugin>
+		</plugins>
+		<collections>
+			<collection>OCA\Files_Lifecycle\Dav\RootCollection</collection>
+		</collections>
+	</sabre>
+	<commands>
+		<command>OCA\Files_Lifecycle\Command\Archive</command>
+		<command>OCA\Files_Lifecycle\Command\Expire</command>
+		<command>OCA\Files_Lifecycle\Command\Restore</command>
+		<command>OCA\Files_Lifecycle\Command\RestoreAll</command>
+		<command>OCA\Files_Lifecycle\Command\SetUploadTime</command>
+	</commands>
+</info>

@@ -1,0 +1,39 @@
+div.icon-archive {
+  background-image: url('../img/archive.svg');
+}
+a.nav-icon-archive {
+  background-image: url('../img/archive.svg');
+}
+li.nav-archive {
+  position: fixed !important;
+  width: inherit !important;
+  bottom: 44px;
+}
+
+span.icon.icon-restore {
+  background-image: url('../img/restore.svg');
+}
+
+#app-content-archive a.action-share,a.action-menu {
+  display: none !important;
+}
+
+.lifecycleInfoView {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+
+[data-color="info"] {
+  background-color: lightblue;
+}
+
+[data-color="warning"] {
+  background-color: #fc4;
+}
+
+[data-color="danger"] {
+  background-color: #ce3702;
+  color: #fff;
+}
