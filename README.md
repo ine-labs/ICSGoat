@@ -1,6 +1,6 @@
 # ICSGoat : A Damn Vulnerable ICS Infrastructure
 
-![1](placeholder)
+![1](https://github.com/user-attachments/assets/9b297982-1521-4a0f-9567-24328b440ca7)
 
 ICSGoat is a vulnerable by design ICS infrastructure.ICSGoat mimics real-world infrastructure but with added vulnerabilities. It features simulations of multiple popularly used ICS protocols. ICSGoat is focused on a black box approach and will help understand the possible threats to critical ICS Infrastructure.
 
@@ -59,13 +59,13 @@ sudo docker-compose up
 Infrastructure Diagram:
 
 <p align="center">
-  <img src="placeholder">
+  <img src="https://github.com/user-attachments/assets/f29e641e-e1bf-4bd4-8e35-7ccd4272f2f6">
 </p>
 
 Escalation Path:
 
 <p align="center">
-  <img src="placeholder">
+  <img src="https://github.com/user-attachments/assets/667e5e57-8272-4c29-bd08-a1549d09cd35">
 </p>
 
 
