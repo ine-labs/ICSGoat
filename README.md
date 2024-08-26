@@ -14,8 +14,9 @@ Currently ICSGoat features the following protocols:
 
 **Presented at**
 
-- [BlackHat ASIA 2024](https://www.blackhat.com/us-24/arsenal/schedule/index.html#icsgoat-a-damn-vulnerable-ics-infrastructure-39448)
-
+- [BlackHat USA 2024](https://www.blackhat.com/us-24/arsenal/schedule/index.html#icsgoat-a-damn-vulnerable-ics-infrastructure-39448)
+  - [BlackHat USA Arsenal Demo Video](https://youtu.be/A8pWXP_wgrk)
+  
 ### Developed with :heart: by [INE](https://ine.com/) 
 
 [<img src="https://user-images.githubusercontent.com/25884689/184508144-f0196d79-5843-4ea6-ad39-0c14cd0da54c.png" alt="drawing" width="200"/>](https://discord.gg/TG7bpETgbg)
